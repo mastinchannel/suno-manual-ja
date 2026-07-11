@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunoで曲を作る方法まとめ｜Extend・Persona・Voices・Stem分離 - Suno AI 日本語マニュアル(非公式)</title>
+<meta name="description" content="Suno AIで曲を編集・作成する全操作を解説。Extendで曲を伸ばす方法、Persona・Voicesの使い方、Stem分離、Remix・Coverの権利関係まで、非公式日本語マニュアルがまとめて紹介します。">
+<link rel="canonical" href="https://suno.mastinchannel.com/making-music.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Suno AI 日本語マニュアル(非公式)">
+<meta property="og:url" content="https://suno.mastinchannel.com/making-music.html">
+<meta property="og:title" content="Sunoで曲を作る方法まとめ｜Extend・Persona・Voices・Stem分離">
+<meta property="og:description" content="Suno AIで曲を編集・作成する全操作を解説。Extendで曲を伸ばす方法、Persona・Voicesの使い方、Stem分離、Remix・Coverの権利関係まで、非公式日本語マニュアルがまとめて紹介します。">
+<meta property="og:image" content="https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sunoで曲を作る方法まとめ｜Extend・Persona・Voices・Stem分離">
+<meta name="twitter:description" content="Suno AIで曲を編集・作成する全操作を解説。Extendで曲を伸ばす方法、Persona・Voicesの使い方、Stem分離、Remix・Coverの権利関係まで、非公式日本語マニュアルがまとめて紹介します。">
+<meta name="twitter:image" content="https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Suno AI 日本語マニュアル", "item": "https://suno.mastinchannel.com/" },
+    { "@type": "ListItem", "position": 2, "name": "曲を作る", "item": "https://suno.mastinchannel.com/making-music.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Sunoで曲を作る方法まとめ",
+  "description": "Suno AIで曲を編集・作成する全操作を解説。Extendで曲を伸ばす方法、Persona・Voicesの使い方、Stem分離、Remix・Coverの権利関係まで網羅した日本語ガイド。",
+  "inLanguage": "ja",
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-12",
+  "url": "https://suno.mastinchannel.com/making-music.html",
+  "mainEntityOfPage": "https://suno.mastinchannel.com/making-music.html",
+  "image": "https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg",
+  "author": { "@type": "Organization", "name": "mastin channel", "url": "https://mastinchannel.com" },
+  "publisher": { "@type": "Organization", "name": "mastin channel", "url": "https://mastinchannel.com" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Extendで曲を伸ばす方法",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "text": "曲の「…」アイコンから Remix/Edit を選ぶ" },
+    { "@type": "HowToStep", "position": 2, "text": "Extend までスクロール" },
+    { "@type": "HowToStep", "position": 3, "text": "Extend ウィンドウ内の矢印をドラッグして、元の曲をどこまで残すか・どこから延長するかを指定する(再生しながら位置を確認可能)" },
+    { "@type": "HowToStep", "position": 4, "text": "新しい歌詞やスタイルを入力し Create" },
+    { "@type": "HowToStep", "position": 5, "text": "気に入ったExtendができたら「…」→ Create → Get Whole Song で、元の曲と新しい部分を1つの曲としてつなげる" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Voiceプロフィールの作り方",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "text": "Create の Add Voice ボタン(または表示される Try Now)をクリック" },
+    { "@type": "HowToStep", "position": 2, "text": "既存のVoiceを選ぶか、Create Voice で新規作成" },
+    { "@type": "HowToStep", "position": 3, "text": "音源を選択する:ライブラリ内の曲/リアルタイム録音/音声ファイルのアップロード(15秒〜4分、うちベストな2分を選択)" },
+    { "@type": "HowToStep", "position": 4, "text": "表示されたフレーズを読み上げて本人確認(なりすまし防止のための音声検証)" },
+    { "@type": "HowToStep", "position": 5, "text": "スキルレベル・プロフィール画像・名前などを設定して保存" },
+    { "@type": "HowToStep", "position": 6, "text": "歌詞・スタイル・タイトルを入力し、モデルにVoiceが選択されていることを確認してCreate(Audio Influenceは高めに設定)" }
+  ]
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGBV7L04Y0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RGBV7L04Y0');
+</script>
+</head>
+<body id="top">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
+      <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
+      <span class="sub">非公式・2026年7月8日時点</span>
+    </div>
+    <span class="theme-note">ブラウザのテーマ設定に自動対応</span>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav aria-label="目次">
+      <ol>
+        <li><a class="chap" href="intro.html">はじめに</a></li>
+        <li>
+          <a class="chap" href="making-music.html">曲を作る</a>
+          <ul class="sub-links">
+            <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
+            <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
+            <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
+            <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
+            <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-stem">Stem分離</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="chap" href="studio.html">Suno Studio</a>
+          <ul class="sub-links">
+            <li><a href="studio.html#st-overview">概要・動作環境</a></li>
+            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-edit">編集・録音</a></li>
+            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-export">エクスポート</a></li>
+            <li><a href="studio.html#st-updates">最近のアップデート</a></li>
+          </ul>
+        </li>
+        <li><a class="chap" href="mobile.html">モバイルアプリ</a></li>
+        <li><a class="chap" href="billing.html">アカウントと請求</a></li>
+        <li><a class="chap" href="rights.html">権利と著作権</a></li>
+        <li><a class="chap" href="hooks.html">Hooks</a></li>
+        <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
+        <li><a class="chap" href="glossary.html">用語集</a></li>
+        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+      </ol>
+    </nav>
+    <div class="sidebar-footer">
+      本ページはSuno, Inc.公式の文書ではありません。最新情報は<br>
+      <a href="https://help.suno.com/en">help.suno.com</a> でご確認ください。
+    </div>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <p class="breadcrumb"><a href="index.html">Suno AI 日本語マニュアル</a> ＞ 曲を作る</p>
+      <p class="eyebrow">Chapter 02</p>
+      <h1>Sunoで曲を作る方法まとめ</h1>
+      <p>この章では、生成した曲を編集・加工したり、素材から曲を作ったり、プロンプトを工夫したりするための機能をまとめます。ほとんどの操作は、曲の <span class="term">More Actions</span>(3点リーダー「…」アイコン)メニューから行います。</p>
+
+      <h2 id="mm-edit">Sunoで曲を編集する方法(Extend・Crop・Replace Section)</h2>
+
+      <h3>Extend機能で曲を伸ばす方法</h3>
+      <p>曲の続きを作りたい、あるいは終わり方を変えたいときは <span class="term">Extend</span> を使います。</p>
+      <ol>
+        <li>曲の「…」アイコンから Remix/Edit を選ぶ</li>
+        <li>Extend までスクロール</li>
+        <li>Extend ウィンドウ内の矢印をドラッグして、元の曲をどこまで残すか・どこから延長するかを指定(再生しながら位置を確認可能)</li>
+        <li>新しい歌詞やスタイルを入力し Create</li>
+        <li>気に入ったExtendができたら「…」→ Create → Get Whole Song で、元の曲と新しい部分を1つの曲としてつなげられる</li>
+      </ol>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2409601">How do I make my song longer?</a></blockquote>
+
+      <h3>Cropで曲の前後を切り詰める方法</h3>
+      <p>Pro/Premierプランでは、曲の冒頭や末尾の不要な部分をカットできます。</p>
+      <ol>
+        <li>Library または Create で曲を選択</li>
+        <li>「…」→ Remix/Edit → Crop Song</li>
+        <li>波形をドラッグして範囲を選択、端をドラッグして微調整</li>
+        <li>Crop Song をクリックすると、新しい曲としてLibraryとWorkspaceに追加される</li>
+      </ol>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/3166529">How do I crop a song?</a></blockquote>
+
+      <h3>Replace Sectionで曲の一部を差し替える方法</h3>
+      <p>Cropが曲の前後を切るのに対し、Replace Sectionは曲の<strong>途中</strong>を差し替えたり歌詞を変更したりできます(Pro/Premier)。</p>
+      <ol>
+        <li>「…」→ Edit → Replace Section</li>
+        <li>差し替えたい範囲をドラッグして選択(元の歌詞が表示される)</li>
+        <li>歌詞を修正し、Create の位置にある Recreate Section をクリック</li>
+        <li>生成された2つの候補を聴き比べて選択 → Confirm</li>
+        <li>差し替えた部分を含む新しい「Whole Song」が作成される(Section/Full Songとしてタグ付け)</li>
+      </ol>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/3271873">Can I replace a section of a song?</a></blockquote>
+
+      <h3>Song Editorでセクション単位に編集する方法</h3>
+      <p>V4.5以降では、波形ベースで区間ごとに編集できる Song Editor が使えます。主な機能:</p>
+      <ul>
+        <li><strong>Fade In / Fade Out</strong>:各セクションの端にあるアイコンをクリック、ドラッグでフェード長を調整</li>
+        <li><strong>セクションの並べ替え</strong>:セクション名をドラッグして移動(サビとAメロの入れ替えなどに便利)</li>
+        <li><strong>Quick Replace</strong>:選択中セクションをワンクリックで別バージョンに差し替え</li>
+        <li><strong>新規セクション追加</strong>:セクション間の「+」アイコンから、ビート数と歌詞を指定して新しいセクションを生成</li>
+        <li><strong>More Actions(…)</strong>:セクション名やカラーの変更、Split(分割)・Crop など</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/6141505">How to Use: Song Editor</a></blockquote>
+
+      <h3>Remasterで音質・ミックスを整える方法</h3>
+      <p>Remasterは、曲の構成・歌詞・演奏はそのままに、音質やミックスだけを整えたいときに使います。Create メニューから選択でき、Variation strength(変化の度合い)を Subtle / Normal(既定) / High から選べます。</p>
+      <ul>
+        <li><strong>Subtle</strong>:ミックスを少しクリーンにしたいだけのとき</li>
+        <li><strong>Normal</strong>:曲の雰囲気は保ちつつ、少し変化を加えたいとき</li>
+        <li><strong>High</strong>:ボーカルの質感や楽器バランスなど、明確な変化を試したいとき</li>
+      </ul>
+      <p>似た機能に <span class="term">Cover</span> がありますが、Coverはボーカルやジャンルなど大きな変更を加えるためのもの、Remasterはあくまで音質・ミックス調整用です(歌詞の変更やジャンルの大幅変更には向きません)。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8105281">Remaster</a></blockquote>
+
+      <h3>Reuse Promptで声や歌詞を変えて作り直す方法</h3>
+      <p>曲そのものは1つの音声ファイルなので、あとから声や歌詞だけを直接編集することはできません(Stemを使った編集は<a href="studio.html">Suno Studio</a>を参照)。手軽な代替手段が <span class="term">Reuse Prompt</span> です。</p>
+      <ul>
+        <li>Library で曲の「…」→ Reuse Prompt を選ぶと、以前と同じ設定(歌詞・スタイル・タイトル)が入力された状態で新規作成画面が開き、そこから内容を変更できる</li>
+        <li>曲の終わり方だけを変えたい場合は Extend も利用可能</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2417409">Can I change the voice or lyrics in my song?</a></blockquote>
+      <p>他人の曲からインスピレーションを得て Reuse Prompt を使う場合、歌詞が含まれる曲では元の作者の許可が必要です(詳しくは<a href="rights.html">権利と著作権</a>)。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2551041">Can I use Reuse Prompt with someone else's song?</a></blockquote>
+
+      <h2 id="mm-material">アップロード音源やプレイリストから曲を作る方法</h2>
+
+      <h3>Upload Audioで自分の音源から曲を作る方法</h3>
+      <p>自分で録音したメロディや、気になった音を素材にして曲を作れます。</p>
+      <ol>
+        <li>Create 画面から Upload Audio を選択</li>
+        <li>端末からファイルを読み込むか、その場で録音(6〜60秒、Pro/Premierは最大120秒)</li>
+        <li>必要に応じてタイトルやアルバムアートを変更</li>
+        <li>アップロード素材の著作権は自分にあることに同意して Continue</li>
+        <li>Library から Extend などを使って曲を組み立てていく</li>
+      </ol>
+      <p>V4.5以降ではさらに長い音源をアップロードできるようになりました。Basic(無料)プランは60秒まで、Pro/Premierプランは最大8分の音源をアップロードして、曲全体の素材にできます。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2477633">What does Upload Audio do?</a> / <a href="https://help.suno.com/en/articles/6141569">How to Use: Audio Uploads</a></blockquote>
+
+      <h3>Suno Soundsで効果音・サンプル音を作る方法</h3>
+      <p>Suno Sounds は、楽曲そのものではなく、効果音・楽器サンプル・環境音などの短い音声クリップをテキストプロンプトから生成する実験的機能です。</p>
+      <ul>
+        <li>アクセス方法: Create → Custom Mode → ドロップダウンメニューから Sounds を選択</li>
+        <li>プロンプトは具体的に(例:「cinematic whoosh transition sound」「heavy metal door slam with echo」)</li>
+        <li>Type は <strong>One Shot</strong>(単発の音)か <strong>Loop</strong>(ループ素材)を選択でき、BPMやKeyも指定可能</li>
+        <li>コツ:分かりやすい擬音語(whoosh, glitch, rumble, crash, bark, kick drum など)を使う、結果が違っても新しい発見として活用する</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/10625537">Suno Sounds: Generate Custom Audio Samples</a></blockquote>
+
+      <h3>Add Vocalsでインストゥルメンタルに歌を乗せる方法</h3>
+      <p>インストゥルメンタル(アップロードまたは生成、あるいはStemから作成)に、自分の歌詞をもとにしたボーカルを乗せる機能です(β版、Pro/Premier限定)。</p>
+      <ol>
+        <li>Library または Workspaces で対象の曲を選択</li>
+        <li>「…」→ remix メニューから Add Vocals を選択</li>
+        <li>歌詞を入力して Create</li>
+      </ol>
+      <p>Advanced Options の Audio Strength スライダーで、元のインストゥルメンタルへの忠実度を調整できます。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/6882817">Add Vocals</a></blockquote>
+
+      <h3>Inspireでプレイリストの雰囲気から新曲を作る方法</h3>
+      <p>お気に入りの曲をまとめたプレイリストの雰囲気(ムード・テンポ・楽器編成など)を分析し、それをもとに新しい曲を生成する機能です。</p>
+      <ul>
+        <li>Create ページ(Custom Mode)の歌詞欄上にある <strong>+Inspo</strong> ボタンからプレイリストを選択</li>
+        <li>または、任意のプレイリスト上部の Inspire ボタンから利用</li>
+        <li>コツ:精度を上げたい場合は3〜5曲程度の短いプレイリストがおすすめ</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/6882753">Inspire</a></blockquote>
+
+      <h2 id="mm-prompt">Sunoのプロンプトの書き方とスタイル指定のコツ</h2>
+
+      <h3>Excludeで含めたくない要素を除外する方法</h3>
+      <p>含めたくない要素(特定の楽器など)を指定できます。Custom Modeで Advanced Options を開き、Exclude欄に除外したい内容を入力します。生成結果には「いいね/よくないね」で評価しておくと、今後の精度向上に役立ちます。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/3161921">How do I exclude elements of a song?</a></blockquote>
+
+      <h3>Creative Slidersの使い方(Weirdness・Style Influence・Audio Influence)</h3>
+      <p>Custom Modeで使える3つのスライダーで、生成の傾向を調整できます。</p>
+      <ul>
+        <li><strong>Weirdness</strong>:Safe〜Chaos(50%が標準)</li>
+        <li><strong>Style Influence</strong>:Loose〜Strong(スタイル入力にどれだけ忠実か)</li>
+        <li><strong>Audio Influence</strong>:Audio Uploadを使う場合のみ表示。アップロード素材への忠実度</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/6141377">How to Use: Creative Sliders</a></blockquote>
+
+      <h3>プロンプトを強化する方法(Creative Prompt Boosting・My Taste)</h3>
+      <ul>
+        <li><strong>Creative Prompt Boosting</strong>:スタイル欄にプロンプトを入力後、右上のアイコンをクリックすると、より豊かな表現に自動変換してくれます。</li>
+        <li><strong>My Taste</strong>:自分がよく使うジャンルや好みを学習し、Stylesの魔法の杖アイコンから、パーソナライズされたスタイル説明を生成できます(全ユーザー利用可・デフォルトで有効)。設定はアバターメニューの My Taste から変更可能です。</li>
+        <li>歌詞欄でも、ジャンルだけでなく背景描写を含めた具体的なプロンプトを書くと、より意図に近い結果が得られます。</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/5804417">Creative Prompt Boosting in V4.5</a> / <a href="https://help.suno.com/en/articles/11362561">My Taste</a> / <a href="https://help.suno.com/en/articles/5782977">Create in V4.5: Better Prompts in Lyrics</a> / <a href="https://help.suno.com/en/articles/5782849">Create in V4.5: Detailed Style Instructions</a></blockquote>
+
+      <h3>音楽用語を使ってプロンプトの精度を上げるコツ</h3>
+      <p>テンポ(Adagio、Allegroなど)、ダイナミクス(Crescendo、Staccatoなど)、曲構成(Verse、Chorus、Bridgeなど)、ジャンル、ボーカル技法(Falsetto、Melismaなど)といった音楽用語を組み合わせると、狙った雰囲気に近づけやすくなります。詳しい用語一覧は<a href="glossary.html">用語集</a>を参考にしてください。</p>
+
+      <h2 id="mm-persona">PersonaとVoicesの使い方</h2>
+
+      <h3>Personaの作り方(曲の「らしさ」を保存して再利用する機能)</h3>
+      <p>お気に入りの曲のボーカルやスタイルの本質を保存し、別の曲づくりに呼び出せる機能です。</p>
+      <ol>
+        <li>好きな曲の「…」→ Create → Make Persona</li>
+        <li>Personaは既定で公開設定。非公開にしたい場合はトグルで切り替え</li>
+        <li>名前・アバター・説明を設定</li>
+      </ol>
+      <p>作成したPersonaは Library の Personas タブ、または <a href="https://suno.com/me/personas">suno.com/me/personas</a> から確認できます。Custom Modeで新しい曲を作る際、歌詞欄の上にあるPersonaエリアから呼び出すと、スタイルが自動的に反映されます。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/3484161">What are Personas?</a></blockquote>
+
+      <h3>Voicesで自分の声をSuno楽曲に反映する方法(v5.5〜)</h3>
+      <p>v5.5で追加された Voices は、Personaをさらに発展させ、<strong>自分自身の声</strong>をSuno楽曲に反映できる機能です。歌手でなくても、自分の声で歌う楽曲を作れます。Create画面では、Personaの代わりにVoicesボタンが表示されるようになりましたが、スタイル面のPersonaは引き続きVoicesメニュー内で利用できます。</p>
+      <p><strong>Voiceプロフィールの作り方:</strong></p>
+      <ol>
+        <li>Create の Add Voice ボタン(または表示される Try Now)をクリック</li>
+        <li>既存のVoiceを選ぶか、Create Voice で新規作成</li>
+        <li>音源を選択:ライブラリ内の曲/リアルタイム録音/音声ファイルのアップロード(15秒〜4分、うちベストな2分を選択)</li>
+        <li>表示されたフレーズを読み上げて本人確認(なりすまし防止のための音声検証)</li>
+        <li>スキルレベル・プロフィール画像・名前などを設定して保存</li>
+        <li>歌詞・スタイル・タイトルを入力し、モデルにVoiceが選択されていることを確認してCreate(Audio Influenceは高めに設定)</li>
+      </ol>
+      <p>アカペラ(伴奏なし)の録音が最もきれいな結果につながります。伴奏入りの音源でもStem分離で自動的にボーカルが抽出されます。Voicesは18歳以上のユーザーのみ利用可能で、地域によっては利用できない場合があります。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/11362369">Voices: Use Your Voice in Suno</a></blockquote>
+      <p><strong>よくある質問:</strong></p>
+      <ul>
+        <li>自分のVoiceを使った曲は、公開設定(かつRemix許可)にすれば他ユーザーがCoverやRemixすることも可能です。</li>
+        <li>Voiceの通報は、アプリ内から直接行えます。</li>
+        <li>音声認証に失敗する場合は静かな環境で明瞭に発話する、声が似ないと感じる場合はモデルでv5.5が選択されているか・Audio Influenceを上げてみるなどを確認してください。</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/11362433">Voices FAQ</a></blockquote>
+
+      <h3>Custom Modelsで自分の曲用にモデルを調整する方法(v5.5〜)</h3>
+      <p>Pro/Premierユーザーは、Suno外で作った自分の楽曲(最低6曲)をアップロードして、最大3つの独自モデルバリアントを作成できます。Bulk Upload機能で複数曲をまとめてアップロードすることも可能です。</p>
+      <ol>
+        <li>Create のモデル選択メニューから Create Custom Model を選ぶ</li>
+        <li>6曲以上アップロードしたら Create Custom Model を実行(準備に2〜5分程度)</li>
+        <li>完成するとモデル選択メニューに表示される</li>
+      </ol>
+      <p>アップロードする曲はすべて自分が権利を持つものである必要があります。Custom Modelは非公開で、他ユーザーと共有することはできません。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/11362497">Custom Models in v5.5</a></blockquote>
+
+      <h2 id="mm-remix">Remix・Coverの使い方と曲の共有設定</h2>
+
+      <h3>Remixとは何か</h3>
+      <p>Sunoでの「Remix」は、Cover・Extend・Adjust Speed・Reuse Prompt(Styles and Lyrics)・Crop・Replace Sectionといった一連の派生操作をまとめた呼び方です。Web版では「…」メニューの一番上に Remix/Edit があります。</p>
+      <p>他人の曲をRemixするには、その曲でRemixが許可されている必要があります。Remixで作った曲の権利は元の作者に帰属するため、自分のオリジナル曲でない場合は収益化できません。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/6050497">How do I make a Remix?</a> / <a href="https://help.suno.com/en/articles/5663873">Remix FAQ's</a></blockquote>
+
+      <p><strong>Remixの許可設定:</strong> 2025年5月21日より前に作られた曲はデフォルトでRemix無効、それ以降に作られた曲はデフォルトで有効です(公開範囲とは別設定)。「…」→ Visibility and Permissions の Allow Remixes トグルでいつでも変更できます。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/5675265">How do I enable or disable Remixes?</a></blockquote>
+
+      <p><strong>帰属表示(Attribution):</strong> 誰かがあなたの曲をRemixすると、その曲のページに必ず元の曲へのリンクが表示され、誰の作品かが分かるようになっています。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/6050561">Will I get attribution when someone Remixes my song?</a></blockquote>
+      <p>収益化の可否については<a href="rights.html">権利と著作権</a>の章で詳しく扱います。</p>
+
+      <h3>Coverでメロディを保ったままスタイルを変換する方法</h3>
+      <p>既存の楽曲のメロディを保ったまま、スタイルだけを変換する機能です(β版、Pro/Premier限定)。自分が作った曲にのみ使用可能です。</p>
+      <ol>
+        <li>Libraryで対象の曲を選択</li>
+        <li>「…」→ Create → Cover Song</li>
+        <li>新しいStyle of Musicとタイトルを入力しCreate</li>
+      </ol>
+      <p>最初のCover生成はクレジット無料です。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2872257">What is a Cover?</a></blockquote>
+
+      <h3>曲の共有方法と公開設定(Public / Link Only)</h3>
+      <p>曲は作成時デフォルトで <strong>Link Only</strong>(リンクを知っている人のみ視聴可)です。公開範囲は「…」メニューの Visibility からいつでも変更できます。</p>
+      <ul>
+        <li><strong>Public</strong> に変更すると、プロフィールで公開され、検索対象になり、ホームページのおすすめプレイリストに掲載される可能性があります。</li>
+        <li>Library の Copy Link ボタン、または「…」の Share オプションからリンクを共有できます。</li>
+        <li>Suno Discordサーバー(ヘルプセンターのフッターにリンクあり)でも音楽を共有できます。</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2481537">Will my song appear on the Suno home page?</a> / <a href="https://help.suno.com/en/articles/2565761">How do I share my music?</a> / <a href="https://help.suno.com/en/articles/2551361">Why don't I see songs in my profile?</a></blockquote>
+
+      <h3>コンテンツモデレーションの仕組み</h3>
+      <p>有名アーティストの実名、著作権・商標に触れる語句、誹謗中傷、過度な下品表現などを含む曲は生成がブロックされたり、公開後に削除・非公開化されたりする場合があります。コミュニティからの通報でも確認され、著作権者からの申し立てがあればDMCAガイドラインに従って対応されます。不明点は support@suno.com まで。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/3198209">Does Suno moderate songs?</a></blockquote>
+
+      <h2 id="mm-manage">曲の管理方法(Workspaces・ダウンロード・削除)</h2>
+
+      <h3>Workspacesで曲を整理する方法</h3>
+      <p>Create画面内で使える整理機能で、Libraryとは別に曲をまとめられます。</p>
+      <ul>
+        <li>Createボタン上の My Workspace から、既存ワークスペースの選択や新規作成が可能</li>
+        <li>Extendで作った派生曲をまとめて管理するのに便利</li>
+        <li>Libraryで複数曲をShift+クリック/Command(Ctrl)+クリックで選択し、Move to Workspaceでまとめて移動可能</li>
+        <li>Filtersボタンで、例えば「Public」の曲だけを表示するなど絞り込みができる</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/4326849">What are Workspaces?</a></blockquote>
+
+      <h3>曲をダウンロードする方法</h3>
+      <p>Library/Workspaceの「…」→ Download からファイル形式を選んでダウンロードできます。複数曲をまとめてダウンロードすることも可能です(Windows: Ctrl+クリックまたはShift+クリックで複数選択、Mac: Commandまたは Shiftで複数選択 → 右クリック → Download All)。選択した曲はZIPファイルにまとめられます。</p>
+      <p>wavファイルのダウンロードはPro/Premier限定で、Web版(suno.com)からのみ可能です。モバイルからのダウンロードは常にmp3になります。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2409921">How do I download songs?</a> / <a href="https://help.suno.com/en/articles/2479873">Why can't I download wav files?</a></blockquote>
+
+      <h3>曲を削除する方法</h3>
+      <p>不要な曲は「…」の Move to Trash でゴミ箱に移動できます。Library右上のアイコンからゴミ箱を開き、Restore to Library(復元)または Delete Permanently(完全削除)を選べます。完全削除は元に戻せません。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2426177">How do I delete a song?</a></blockquote>
+
+      <h2 id="mm-stem">Stem分離(Advanced Stem Separation)の使い方</h2>
+      <p>曲をボーカルや楽器などのパーツ(Stem)に分離する機能です。有料プラン限定で、3つのモードがあります。</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>モード</th><th>できること</th><th>消費クレジット</th><th>対象プラン</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Auto Split</strong></td><td>最大12種類のStem(ドラム・ベース・ギター・キーボード・木管楽器など)に自動分割</td><td>抽出1回につき50クレジット</td><td>Pro / Premier</td></tr>
+          <tr><td><strong>Split from Mix</strong></td><td>特定の1パート(ボーカルなど)だけを抽出し、残り全体(complement)も同時に取得</td><td>1回につき10クレジット×2(計20クレジット)</td><td>Pro / Premier</td></tr>
+          <tr><td><strong>Advanced Split</strong></td><td>約100種類の楽器リストから、分離したいパートを自由に選択</td><td>1パートにつき10クレジット×2(計20クレジット)</td><td>Premierのみ</td></tr>
+        </tbody>
+      </table></div>
+      <p>用途の目安:Auto SplitはStudioでのミックス用に素早く分離したいとき、Split from Mixはライブ用インストゥルメンタルを作りたいときなど、特定パートだけ欲しいときに便利です。実際には含まれていない楽器・ボーカルを分離しようとすると、クレジットは消費されるが使えるStemが得られない場合があります。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/12702337">Advanced Stem Separation</a></blockquote>
+
+      <div class="chapter-banner">
+        <a href="https://mastinchannel.com" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source media="(max-width: 480px)" srcset="assets/mastinchannel-banner-320x50.jpg">
+            <img src="assets/mastinchannel-banner-728x90.jpg" width="728" height="90" alt="mastin channel — 歌ものフリー音楽 使い放題" loading="lazy">
+          </picture>
+        </a>
+      </div>
+
+      <div class="end-nav">
+        <a href="intro.html">← はじめに</a>
+        <a href="studio.html">Suno Studio →</a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<a class="back-top" href="#top" aria-label="ページ先頭へ">↑</a>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var sidebar = document.getElementById('sidebar');
+    toggle.addEventListener('click', function(){
+      var open = sidebar.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    sidebar.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.innerWidth <= 880) {
+        sidebar.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var here = location.pathname.split('/').pop() || 'index.html';
+    Array.prototype.forEach.call(document.querySelectorAll('.sidebar a.chap'), function(a){
+      var target = a.getAttribute('href').split('#')[0] || 'index.html';
+      if (target === here) a.classList.add('active');
+    });
+  })();
+</script>
+</body>
+</html>

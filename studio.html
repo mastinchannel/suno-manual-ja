@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suno Studioの使い方まとめ｜編集・ミキシング・EQ・エクスポート - Suno AI 日本語マニュアル(非公式)</title>
+<meta name="description" content="Suno Studioの動作環境、基本操作、Transport、編集・録音、EQ・ミキシング、Export(書き出し)まで、GAW(Generative Audio Workstation)の使い方を解説する非公式日本語ガイドです。">
+<link rel="canonical" href="https://suno.mastinchannel.com/studio.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Suno AI 日本語マニュアル(非公式)">
+<meta property="og:url" content="https://suno.mastinchannel.com/studio.html">
+<meta property="og:title" content="Suno Studioの使い方まとめ｜編集・ミキシング・EQ・エクスポート">
+<meta property="og:description" content="Suno Studioの動作環境、基本操作、Transport、編集・録音、EQ・ミキシング、Export(書き出し)まで、GAW(Generative Audio Workstation)の使い方を解説する非公式日本語ガイドです。">
+<meta property="og:image" content="https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Suno Studioの使い方まとめ｜編集・ミキシング・EQ・エクスポート">
+<meta name="twitter:description" content="Suno Studioの動作環境、基本操作、Transport、編集・録音、EQ・ミキシング、Export(書き出し)まで、GAW(Generative Audio Workstation)の使い方を解説する非公式日本語ガイドです。">
+<meta name="twitter:image" content="https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Suno AI 日本語マニュアル", "item": "https://suno.mastinchannel.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Suno Studio", "item": "https://suno.mastinchannel.com/studio.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Suno Studioの使い方まとめ",
+  "description": "Suno Studioの動作環境、基本操作、Transport、編集・録音、EQ・ミキシング、Export(書き出し)までを解説する日本語ガイド。",
+  "inLanguage": "ja",
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-12",
+  "url": "https://suno.mastinchannel.com/studio.html",
+  "mainEntityOfPage": "https://suno.mastinchannel.com/studio.html",
+  "image": "https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg",
+  "author": { "@type": "Organization", "name": "mastin channel", "url": "https://mastinchannel.com" },
+  "publisher": { "@type": "Organization", "name": "mastin channel", "url": "https://mastinchannel.com" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Suno Studioの基本的な使い方",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "text": "Libraryから曲を選び、Details パネルでRemix/Editを開く" },
+    { "@type": "HowToStep", "position": 2, "text": "Stem横の矢印アイコン、または一番下の Insert All で、必要なStemをタイムラインに追加" },
+    { "@type": "HowToStep", "position": 3, "text": "スペースキーまたはTransportの再生ボタンで再生" },
+    { "@type": "HowToStep", "position": 4, "text": "Context Barでトラックを追加し(例:キーボードパート)、Advanced Optionsで詳細を指定して生成" },
+    { "@type": "HowToStep", "position": 5, "text": "生成結果はTake Lanes(テイクレーン)に2バージョン表示される。スピーカーアイコンで聴き比べ、良い方をCopy to Main Trackで確定" },
+    { "@type": "HowToStep", "position": 6, "text": "気に入った部分を組み合わせる編集(Comping)も可能" },
+    { "@type": "HowToStep", "position": 7, "text": "マイクからの録音や、タイムラインの一部をCreateパネルにドラッグして新曲の素材にすることもできる" }
+  ]
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGBV7L04Y0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RGBV7L04Y0');
+</script>
+</head>
+<body id="top">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
+      <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
+      <span class="sub">非公式・2026年7月8日時点</span>
+    </div>
+    <span class="theme-note">ブラウザのテーマ設定に自動対応</span>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav aria-label="目次">
+      <ol>
+        <li><a class="chap" href="intro.html">はじめに</a></li>
+        <li>
+          <a class="chap" href="making-music.html">曲を作る</a>
+          <ul class="sub-links">
+            <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
+            <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
+            <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
+            <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
+            <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-stem">Stem分離</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="chap" href="studio.html">Suno Studio</a>
+          <ul class="sub-links">
+            <li><a href="studio.html#st-overview">概要・動作環境</a></li>
+            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-edit">編集・録音</a></li>
+            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-export">エクスポート</a></li>
+            <li><a href="studio.html#st-updates">最近のアップデート</a></li>
+          </ul>
+        </li>
+        <li><a class="chap" href="mobile.html">モバイルアプリ</a></li>
+        <li><a class="chap" href="billing.html">アカウントと請求</a></li>
+        <li><a class="chap" href="rights.html">権利と著作権</a></li>
+        <li><a class="chap" href="hooks.html">Hooks</a></li>
+        <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
+        <li><a class="chap" href="glossary.html">用語集</a></li>
+        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+      </ol>
+    </nav>
+    <div class="sidebar-footer">
+      本ページはSuno, Inc.公式の文書ではありません。最新情報は<br>
+      <a href="https://help.suno.com/en">help.suno.com</a> でご確認ください。
+    </div>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <p class="breadcrumb"><a href="index.html">Suno AI 日本語マニュアル</a> ＞ Suno Studio</p>
+      <p class="eyebrow">Chapter 03</p>
+      <h1>Suno Studioの使い方まとめ</h1>
+
+      <h2 id="st-overview">Suno Studioとは(概要・動作環境)</h2>
+      <p>Suno Studio は、AIによる音楽生成と、従来のDAW(Digital Audio Workstation)のようなマルチトラック編集機能を組み合わせた、ブラウザで使えるGAW(Generative Audio Workstation)です。トラックの重ね合わせ、アレンジ、編集、Stem抽出、録音、テンポ調整までを1つの画面で行えます。既存の曲と自然になじむAI生成Stem(ベースライン、パーカッション、メロディなど)をその場で生み出せるため、サンプル素材や追加のミュージシャンを用意しなくても曲を作り込めます。</p>
+      <p>Studioの利用には <strong>Premierプラン</strong> が必要です。</p>
+      <blockquote class="source">出典: suno.com/studio-welcome、<a href="https://help.suno.com/en/articles/7940161">Introduction to Studio</a></blockquote>
+
+      <h3>動作環境(推奨スペック)</h3>
+      <ul>
+        <li>デスクトップ/ノートPC/タブレット(画面幅768px以上、モバイル端末は非対応)</li>
+        <li>SIMD対応CPU(SSE4.1 または Neon)、4GB以上のRAM</li>
+        <li>推奨ブラウザ:最新版のGoogle Chrome</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8333825">What are the minimum requirements for using Studio?</a></blockquote>
+
+      <h2 id="st-basics">Suno Studioの基本的な使い方</h2>
+      <p>左側パネルの Create アイコンの下にある Studio アイコンから起動します。プロジェクトを開くと、タイムライン下部に <span class="term">Context Bar</span>(コンテキストバー)が表示され、状況に応じて Create Panel(曲の新規生成)・Open Library(既存曲の読み込み)・Upload Audio(音声アップロード)などの操作を提供します。</p>
+      <p><strong>基本フロー例:</strong></p>
+      <ol>
+        <li>Libraryから曲を選び、Details パネルでRemix/Editを開く</li>
+        <li>Stem横の矢印アイコン、または一番下の Insert All で、必要なStemをタイムラインに追加</li>
+        <li>スペースキーまたはTransportの再生ボタンで再生</li>
+        <li>Context Barでトラックを追加し(例:キーボードパート)、Advanced Optionsで詳細を指定して生成</li>
+        <li>生成結果は <span class="term">Take Lanes</span>(テイクレーン)に2バージョン表示される(表示するにはトラックのドロップダウン→Show Take Lanes)。スピーカーアイコンで聴き比べ、良い方をCopy to Main Trackで確定</li>
+        <li>気に入った部分を組み合わせる編集(<span class="term">Comping</span>)も可能</li>
+        <li>マイクからの録音や、タイムラインの一部をCreateパネルにドラッグして新曲の素材にすることもできる</li>
+      </ol>
+      <p>Studioには保存ボタンがなく、<strong>自動保存</strong>されます。過去のバージョンはプロジェクトメニュー → Versions から時系列で確認・復元できます。作業が終わったら、右上の Export ボタンから書き出します。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/7940161">Introduction to Studio</a></blockquote>
+
+      <h3>Transport(再生・録音)操作の使い方</h3>
+      <p>タイムライン下部にある再生・録音・移動のためのコントロール群です。</p>
+      <ul>
+        <li><strong>Project Tempo</strong>:プロジェクトのBPMを設定。Follow Track(リージョンの自然なテンポに追従)またはManual Tempo(固定テンポ、リージョン側が自動調整)を選択可能</li>
+        <li><strong>Metronome</strong>:クリックでオン/オフ</li>
+        <li><strong>Record</strong>:入力ソースを選択したオーディオトラックで録音を開始(トラック側のRecordボタンも有効化が必要)</li>
+        <li><strong>Back / Forward to Section Start</strong>:リージョンの先頭・末尾に素早く移動</li>
+        <li><strong>Play/Pause</strong>、<strong>Loop</strong>(選択区間をループ再生)、<strong>Follow Playhead</strong>(再生位置に合わせて自動スクロール)</li>
+        <li><strong>Clock</strong>:拍数表示と時間(分:秒:ミリ秒)表示を切り替え可能</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8121281">Transport controls in Studio</a></blockquote>
+
+      <h3>キーボードショートカット一覧</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>操作</th><th>ショートカット</th></tr></thead>
+        <tbody>
+          <tr><td>Create / Library / Timeline / Details パネル切替</td><td><kbd>1</kbd> / <kbd>2</kbd> / <kbd>3</kbd> / <kbd>4</kbd></td></tr>
+          <tr><td>再生・一時停止</td><td><kbd>Space</kbd></td></tr>
+          <tr><td>カーソルを先頭に戻す</td><td><kbd>Return</kbd></td></tr>
+          <tr><td>メトロノーム切替</td><td><kbd>C</kbd></td></tr>
+          <tr><td>トラックをSolo</td><td><kbd>⌘⇧S</kbd>(Win: <kbd>Ctrl⇧S</kbd>)</td></tr>
+          <tr><td>トラックをMute</td><td><kbd>⌘⇧M</kbd>(Win: <kbd>Ctrl⇧M</kbd>)</td></tr>
+          <tr><td>コピー / ペースト</td><td><kbd>⌘C</kbd> / <kbd>⌘V</kbd>(Win: Ctrl)</td></tr>
+          <tr><td>リージョン分割</td><td><kbd>⌘E</kbd>(Win: <kbd>CtrlE</kbd>)</td></tr>
+          <tr><td>リージョン複製</td><td><kbd>⌘D</kbd>(Win: <kbd>CtrlD</kbd>)</td></tr>
+          <tr><td>フェード追加</td><td><kbd>⇧F</kbd></td></tr>
+        </tbody>
+      </table></div>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/7975809">Keyboard Shortcuts for Studio</a></blockquote>
+
+      <h2 id="st-edit">Suno Studioでの編集・録音方法</h2>
+      <p>Studioで生成・録音した音声は「<span class="term">Region</span>」として配置されます。リージョン上にカーソルを合わせ右クリックすると、コピー・複製・削除・クロップ・ヒール編集などのメニューが開きます。</p>
+      <ul>
+        <li><strong>Clip Settings</strong>(Detailsパネル):クリップの色、テンポ(On Beat / Original Tempo)、トランスポーズ(半音単位)、スピード、ボリュームを変更可能</li>
+        <li><strong>Fade</strong>:クリップ左下・右下にカーソルを合わせるとフェードハンドルが表示される</li>
+        <li><strong>リサイズ</strong>:トラック下端をドラッグしてリージョンの長さを調整</li>
+        <li><strong>Undo / Redo</strong>:画面右上の戻る/進むアイコン、または <kbd>⌘Z</kbd> / <kbd>⌘⇧Z</kbd></li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8041473">Editing in Studio</a></blockquote>
+
+      <h3>Studioで録音する方法(Loop Recordingを含む)</h3>
+      <p>マイク入力(内蔵マイク等)からタイムラインに直接録音できます。ヘッドホンの使用を推奨します。</p>
+      <ol>
+        <li>トラックを追加し、Inputのドロップダウンから入力デバイス(例:内蔵マイク)を選択(ブラウザのマイク許可が必要な場合あり)</li>
+        <li>メトロノームをオンにしてテンポを合わせる</li>
+        <li>トラックのRecordボタンで録音待機、Transportの録音ボタンで録音開始</li>
+      </ol>
+      <p>録音した音(指でのタップなど)をCreateパネルにドラッグすれば、その音を素材としてAIに新しいパート(ドラムなど)を生成させることもできます。</p>
+      <p><strong>Loop Recording</strong>(ループ録音):同じ区間を繰り返し録音し、複数テイクをためられる機能です。</p>
+      <ol>
+        <li>録音用トラックを作成・選択し、入力ソースを設定</li>
+        <li>Transportのループアイコンを有効化</li>
+        <li>ループ区間を設定して録音開始 — ループが一周するたびに新しいテイク(レイヤー)が作成される</li>
+        <li>Show Take Lanes アイコンで全テイクを表示し、良い部分を組み合わせる(Comping)</li>
+      </ol>
+      <p>ボーカルの複数テイク収録、インストゥルメンタルのアドリブ違いの試行、ベースラインの探求、音の重ね録りなどに向いています。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8640385">Recording in Studio</a> / <a href="https://help.suno.com/en/articles/8936897">Loop Recording in Studio</a></blockquote>
+
+      <h2 id="st-mix">Suno Studioでミキシングする方法(EQ・フェーダー・パン)</h2>
+      <p>Studioで生成された曲はある程度ミックス済みの状態ですが、Studio内でさらに微調整できます。</p>
+      <ul>
+        <li><strong>フェーダー(音量)</strong>:トラックのフェーダーを左右にドラッグしてdB単位で音量調整</li>
+        <li><strong>パン</strong>:フェーダー下のパンスライダーで音の左右位置を調整(ダブルクリックでセンターに戻す)</li>
+        <li><strong>Mute</strong>:トラックを完全に無音化(A/Bテストや一時的な除外に便利)。スピーカーアイコンをクリック</li>
+        <li><strong>Solo</strong>:選択したトラックだけを再生し他を無音化(細部の確認や問題箇所の特定に便利)。「S」アイコンをクリック</li>
+      </ul>
+
+      <h3>EQ(イコライザー)の使い方</h3>
+      <p>各トラックのDetailsパネルからアクセスできる6バンドのグラフィック/パラメトリックEQです。</p>
+      <ul>
+        <li>左上のトグルでEQのオン/オフ</li>
+        <li>プリセットの選択、または手動調整で「[Custom]」表示に</li>
+        <li>周波数特性グラフ上のノードをドラッグして直感的に調整可能</li>
+        <li>6バンドそれぞれにフィルタータイプ(Bell/Peak、High-pass、Low-pass、High-shelf、Low-shelf、Notch)を選べる</li>
+        <li>各バンドのパラメータ:<strong>Freq</strong>(中心周波数)、<strong>Gain</strong>(ブースト/カット、目安±12dB)、<strong>Res</strong>(帯域の狭さ/Qファクター)</li>
+      </ul>
+      <p><strong>活用例:</strong> 200〜400Hz付近をカットして曇りを取る、2〜5kHzを持ち上げて存在感を出す、3〜4kHz付近をカットして耳障りさを抑える、10kHz以上をわずかに持ち上げて空気感を出す、100Hz以下で低域をコントロールする、など。まずは±3dB程度の小さな調整から始めるのがおすすめです。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8082241">Mixing in Studio</a> / <a href="https://help.suno.com/en/articles/8935873">How To Use EQ in Studio</a></blockquote>
+
+      <h3>Stem Coverで音を別の楽器に変換する方法</h3>
+      <p>Studio内の任意のクリップを、メロディやリズムを保ったまま別の音・楽器に変換できる機能です。たとえば鼻歌を録音してバイオリンの音にしたり、机を指でタップした録音をドラムのグルーヴに変換したりできます。</p>
+      <ul>
+        <li><strong>Cover</strong>:クリップを生成するために最初に使われた「元の音源」を常に参照する</li>
+        <li><strong>Recreate</strong>:トラック上に現在ある音声を新たな生成元として使う。Coverした結果をさらに作り込みたいときに使う</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/9819905">How to Use Stem Cover in Studio</a></blockquote>
+
+      <h3>テンポドリフトを修正する方法</h3>
+      <p>'80sディスコや'60sジャズなど、テンポが揺れやすいスタイルで生成すると、ライブ演奏のようにテンポが微妙に変動する「テンポドリフト」が起きることがあります。他のDAWにStemを取り込みたい場合はテンポを固定しておくと扱いやすくなります。</p>
+      <ol>
+        <li>Transportの Project Tempo をクリックし、Manual BPM を選択して固定テンポを設定</li>
+        <li>曲をダブルクリックしてStemを抽出(未抽出の場合は Extract Stems)</li>
+        <li>Export → Multitrack で他のDAWに書き出す</li>
+        <li>書き出し先のDAW側のテンポも、Studioで設定したBPMに合わせる</li>
+      </ol>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8363457">Fixing Tempo Drift</a></blockquote>
+
+      <h2 id="st-export">Suno Studioから曲を書き出す方法(Export)</h2>
+      <p>右上の <strong>Export</strong> ドロップダウンから書き出します。</p>
+      <ul>
+        <li><strong>Full Song</strong>:プロジェクト全体のミックスを書き出し</li>
+        <li><strong>Selected Time Range</strong>:タイムラインで選択した範囲のみを書き出し</li>
+        <li><strong>Multitrack</strong>:全トラックをStemとして個別に書き出し(他のDAWでの作業に最適)</li>
+      </ul>
+      <p>個別クリップだけを書き出したい場合は、クリップを右クリック(長押し)して Download .WAV を選択します。</p>
+      <p><strong>MIDI抽出:</strong> Stemパネルで抽出したStemを選び、コンテキストメニューから <strong>Get MIDI</strong>(10クレジット)を選ぶと、メロディやリズムのMIDIファイルを生成できます。</p>
+      <p>すべての音声書き出しは高品質なWAV形式です。書き出し前に、クリップ設定(テンポ・トランスポーズ・スピード)を確認しておきましょう。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8128193">Exporting from Studio</a></blockquote>
+
+      <h2 id="st-updates">Suno Studioの最近のアップデート</h2>
+      <p>Studioは継続的にアップデートされています。主な追加機能:</p>
+      <ul>
+        <li><strong>Track EQ / Loop Recording / Context Window / Project Library刷新</strong>(Studio v1.1):EQとLoop Recordingに加え、生成時に参照する範囲を絞る Context Window、検索・復元機能を備えた新しいProject Libraryが追加されました。</li>
+        <li><strong>Remove FX</strong>:クリップを右クリックして選択すると、リバーブやディレイを取り除いたドライな音を生成できます。</li>
+        <li><strong>Time Signature Support</strong>:下部パネルから拍子(3/4、7/8、5/4など)を設定でき、グリッドとメトロノームが追従します(現時点では生成AI自体には反映されず、編集用グリッドとして機能)。</li>
+        <li><strong>Warp Markers</strong>(タイムストレッチ):クリップのEdit Modeで波形上をクリックしてマーカーを追加し、ピッチを変えずにタイミングを微調整できます。</li>
+        <li><strong>Alternates</strong>(Take Laneの改良):生成候補のプレビュー・選択・確定がよりスムーズになりました。</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8967489">Introducing Studio v1.1</a> / <a href="https://help.suno.com/en/articles/10625089">Introducing Suno Studio 1.2</a></blockquote>
+
+      <div class="chapter-banner">
+        <a href="https://mastinchannel.com" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source media="(max-width: 480px)" srcset="assets/mastinchannel-banner-320x50.jpg">
+            <img src="assets/mastinchannel-banner-728x90.jpg" width="728" height="90" alt="mastin channel — 歌ものフリー音楽 使い放題" loading="lazy">
+          </picture>
+        </a>
+      </div>
+
+      <div class="end-nav">
+        <a href="making-music.html">← 曲を作る</a>
+        <a href="mobile.html">モバイルアプリ →</a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<a class="back-top" href="#top" aria-label="ページ先頭へ">↑</a>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var sidebar = document.getElementById('sidebar');
+    toggle.addEventListener('click', function(){
+      var open = sidebar.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    sidebar.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.innerWidth <= 880) {
+        sidebar.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var here = location.pathname.split('/').pop() || 'index.html';
+    Array.prototype.forEach.call(document.querySelectorAll('.sidebar a.chap'), function(a){
+      var target = a.getAttribute('href').split('#')[0] || 'index.html';
+      if (target === here) a.classList.add('active');
+    });
+  })();
+</script>
+</body>
+</html>

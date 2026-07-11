@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunoモデルバージョン更新履歴(V2〜v5.5) - Suno AI 日本語マニュアル(非公式)</title>
+<meta name="description" content="Suno AIのモデルバージョン(V2〜v5.5)の更新履歴とリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
+<link rel="canonical" href="https://suno.mastinchannel.com/appendix.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Suno AI 日本語マニュアル(非公式)">
+<meta property="og:url" content="https://suno.mastinchannel.com/appendix.html">
+<meta property="og:title" content="Sunoモデルバージョン更新履歴(V2〜v5.5)">
+<meta property="og:description" content="Suno AIのモデルバージョン(V2〜v5.5)の更新履歴とリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
+<meta property="og:image" content="https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sunoモデルバージョン更新履歴(V2〜v5.5)">
+<meta name="twitter:description" content="Suno AIのモデルバージョン(V2〜v5.5)の更新履歴とリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
+<meta name="twitter:image" content="https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Suno AI 日本語マニュアル", "item": "https://suno.mastinchannel.com/" },
+    { "@type": "ListItem", "position": 2, "name": "付録:モデル更新履歴", "item": "https://suno.mastinchannel.com/appendix.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Sunoモデルバージョン更新履歴(V2〜v5.5)",
+  "description": "Suno AIのモデルバージョン(V2〜v5.5)の更新履歴とリリースノートをまとめて解説する日本語ガイド。",
+  "inLanguage": "ja",
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-12",
+  "url": "https://suno.mastinchannel.com/appendix.html",
+  "mainEntityOfPage": "https://suno.mastinchannel.com/appendix.html",
+  "image": "https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg",
+  "author": { "@type": "Organization", "name": "mastin channel", "url": "https://mastinchannel.com" },
+  "publisher": { "@type": "Organization", "name": "mastin channel", "url": "https://mastinchannel.com" }
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGBV7L04Y0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RGBV7L04Y0');
+</script>
+</head>
+<body id="top">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
+      <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
+      <span class="sub">非公式・2026年7月8日時点</span>
+    </div>
+    <span class="theme-note">ブラウザのテーマ設定に自動対応</span>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav aria-label="目次">
+      <ol>
+        <li><a class="chap" href="intro.html">はじめに</a></li>
+        <li>
+          <a class="chap" href="making-music.html">曲を作る</a>
+          <ul class="sub-links">
+            <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
+            <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
+            <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
+            <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
+            <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-stem">Stem分離</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="chap" href="studio.html">Suno Studio</a>
+          <ul class="sub-links">
+            <li><a href="studio.html#st-overview">概要・動作環境</a></li>
+            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-edit">編集・録音</a></li>
+            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-export">エクスポート</a></li>
+            <li><a href="studio.html#st-updates">最近のアップデート</a></li>
+          </ul>
+        </li>
+        <li><a class="chap" href="mobile.html">モバイルアプリ</a></li>
+        <li><a class="chap" href="billing.html">アカウントと請求</a></li>
+        <li><a class="chap" href="rights.html">権利と著作権</a></li>
+        <li><a class="chap" href="hooks.html">Hooks</a></li>
+        <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
+        <li><a class="chap" href="glossary.html">用語集</a></li>
+        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+      </ol>
+    </nav>
+    <div class="sidebar-footer">
+      本ページはSuno, Inc.公式の文書ではありません。最新情報は<br>
+      <a href="https://help.suno.com/en">help.suno.com</a> でご確認ください。
+    </div>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <p class="breadcrumb"><a href="index.html">Suno AI 日本語マニュアル</a> ＞ 付録:モデル更新履歴</p>
+      <p class="eyebrow">Chapter 10 · Appendix</p>
+      <h1>Sunoモデルバージョン更新履歴(V2〜v5.5)</h1>
+      <p>この付録は、Sunoのモデル(生成AIエンジン)がどう進化してきたかという「リリースノート」的な内容をまとめたものです。本編で紹介した機能の多くは、ここに挙げるバージョンアップの中で追加されたものです。バージョン名や日付は今後も更新され続けるため、あくまで参考の記録としてご覧ください。</p>
+
+      <h2>モデルタイムライン一覧</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>モデル</th><th>リリース時期</th><th>主なポイント</th></tr></thead>
+        <tbody>
+          <tr><td>V2</td><td>2023年秋</td><td>最大1分20秒</td></tr>
+          <tr><td>V3</td><td>2024年春</td><td>最大2分に延長</td></tr>
+          <tr><td>V3.5</td><td>2024年夏</td><td>曲構成が向上、初回生成最大4分、Extendは1回2分まで</td></tr>
+          <tr><td>V4</td><td>2024年11月</td><td>ボーカル品質向上、初回生成最大4分。Extend・Cover・Personaに対応</td></tr>
+          <tr><td>V4.5</td><td>2025年5月</td><td>初回生成最大8分、プロンプト追従性向上、ジャンルのマッシュアップが得意に</td></tr>
+          <tr><td>V4.5+(Artist Update)</td><td>2025年7月</td><td>Song Editor・Stem抽出(8種)・最大8分アップロード・Creative Slidersを追加</td></tr>
+          <tr><td>V5</td><td>2025年9月</td><td>音質・ボーカルのリアリティが大幅向上</td></tr>
+          <tr><td>V5.5</td><td>2025年頃</td><td>Voices・Custom Models・My Tasteを追加</td></tr>
+        </tbody>
+      </table></div>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/5782721">Suno Model Timeline & Information</a></blockquote>
+
+      <h2>各バージョンの概要</h2>
+
+      <h3>V4:よりクリアな音質とツールの拡充</h3>
+      <p>より綺麗な音質、より的確な歌詞、より動きのある曲構成を実現。新機能として Remaster(どのモデルで作った曲にも使える音質調整)、新しい歌詞モデル ReMi(既存のClassicモデルと選択可能)、より洗練されたアルバムアート生成が追加され、CoverやPersonaの精度も向上しました。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/3593281">Suno V4 - What's New?</a></blockquote>
+
+      <h3>V4.5:ジャンル理解とボーカル表現の強化</h3>
+      <p>ジャンルの選択肢が拡大し、ジャンルのマッシュアップ(例:ミッドウェストエモ×ネオソウル)がより自然に。ボーカルの深みや感情表現が向上し、細かい質感の指示もより忠実に反映されるようになりました。プロンプト強化ボタン(Enhance)が追加され、CoverとPersonaを組み合わせて使えるようにもなりました。初回生成の上限が4分から8分に延長。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/5782593">What's new in V4.5</a></blockquote>
+
+      <h3>Artist Update(V4.5+):プロ向け編集ツール</h3>
+      <p>Song Editor(セクション単位の波形編集)、8種類のクリーンなStem抽出、最大8分の音源アップロード、Creative Slidersの3種のコントロールが、Pro/Premierユーザー向けに追加されました。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/6141313">What is included in Suno's Artist Update?</a></blockquote>
+
+      <h3>V5:技術基盤の刷新</h3>
+      <p>Sunoとして「これまでで最も大きな技術的飛躍」と位置づけるアップデート。30秒の短いフックから8分の大作まで一貫した構成、ユーザーの好みに合わせて調整するクリエイティブ・インテリジェンス、摩擦の少ないワークフロー、複数世代にわたって声や楽器の個性を保持する仕組み、テンポ・キー・ダイナミクスなどを細かく制御できるプロフェッショナル向けコントロール、そして従来比10倍高速な生成が特徴です。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8105153">Introducing v5</a></blockquote>
+
+      <h3>V5.5:Voices・Custom Models・My Tasteを追加</h3>
+      <p>これまでで最も表現力が高く、パーソナライズされたモデルと位置づけられています。</p>
+      <ul>
+        <li><strong>Voices</strong>:Personaをさらに発展させ、自分自身の声をSuno楽曲に反映できる機能</li>
+        <li><strong>Custom Models</strong>:Pro/Premierユーザーが自分の楽曲(最低6曲)から最大3つの専用モデルを作成できる機能</li>
+        <li><strong>My Taste</strong>:全ユーザー向けに、好みのジャンル・ムードを学習してスタイル提案に反映する機能</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/11362305">What's New in v5.5</a></blockquote>
+
+      <h2>モデルの整理・非推奨化について(2025年9月時点)</h2>
+      <p>Suno側の発表によると、最新技術へリソースを集中するため、一部の古いモデルが段階的に提供終了となりました。</p>
+      <ul>
+        <li>無料ユーザー向けのV2・V3モデルの提供終了</li>
+        <li>全ユーザー向けのRemaster v4の提供終了</li>
+      </ul>
+      <p>既存の生成済みコンテンツは引き続きアクセス可能です。古いモデルを使ったプロジェクトを進行中の場合は、提供終了前に新しいモデルへの移行が推奨されていました。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/7986753">Model Availability Update (Sept 11, 2025)</a></blockquote>
+
+      <div class="chapter-banner">
+        <a href="https://mastinchannel.com" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source media="(max-width: 480px)" srcset="assets/mastinchannel-banner-320x50.jpg">
+            <img src="assets/mastinchannel-banner-728x90.jpg" width="728" height="90" alt="mastin channel — 歌ものフリー音楽 使い放題" loading="lazy">
+          </picture>
+        </a>
+      </div>
+
+      <div class="end-nav">
+        <a href="glossary.html">← 用語集</a>
+        <a href="https://help.suno.com/en">help.suno.com で最新情報を見る ↗</a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<a class="back-top" href="#top" aria-label="ページ先頭へ">↑</a>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var sidebar = document.getElementById('sidebar');
+    toggle.addEventListener('click', function(){
+      var open = sidebar.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    sidebar.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.innerWidth <= 880) {
+        sidebar.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var here = location.pathname.split('/').pop() || 'index.html';
+    Array.prototype.forEach.call(document.querySelectorAll('.sidebar a.chap'), function(a){
+      var target = a.getAttribute('href').split('#')[0] || 'index.html';
+      if (target === here) a.classList.add('active');
+    });
+  })();
+</script>
+</body>
+</html>

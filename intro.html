@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suno AIとは?初めての曲の作り方(Simple Mode・Custom Mode) - Suno AI 日本語マニュアル(非公式)</title>
+<meta name="description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
+<link rel="canonical" href="https://suno.mastinchannel.com/intro.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Suno AI 日本語マニュアル(非公式)">
+<meta property="og:url" content="https://suno.mastinchannel.com/intro.html">
+<meta property="og:title" content="Suno AIとは?初めての曲の作り方(Simple Mode・Custom Mode)">
+<meta property="og:description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
+<meta property="og:image" content="https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Suno AIとは?初めての曲の作り方(Simple Mode・Custom Mode)">
+<meta name="twitter:description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
+<meta name="twitter:image" content="https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Suno AI 日本語マニュアル", "item": "https://suno.mastinchannel.com/" },
+    { "@type": "ListItem", "position": 2, "name": "はじめに", "item": "https://suno.mastinchannel.com/intro.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Suno AIとは?初めての曲の作り方",
+  "description": "Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説する日本語ガイド。",
+  "inLanguage": "ja",
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-12",
+  "url": "https://suno.mastinchannel.com/intro.html",
+  "mainEntityOfPage": "https://suno.mastinchannel.com/intro.html",
+  "image": "https://suno.mastinchannel.com/assets/mastinchannel-banner-728x90.jpg",
+  "author": { "@type": "Organization", "name": "mastin channel", "url": "https://mastinchannel.com" },
+  "publisher": { "@type": "Organization", "name": "mastin channel", "url": "https://mastinchannel.com" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Simple Modeで最初の一曲を作る方法",
+  "step": [
+    { "@type": "HowToStep", "position": 1, "text": "suno.com/create にアクセスし、Simple を選択" },
+    { "@type": "HowToStep", "position": 2, "text": "聴きたい曲の説明を入力する(例:「A synth pop song about having fun all night」のように、ジャンルや雰囲気を一言で)" },
+    { "@type": "HowToStep", "position": 3, "text": "アイデアが浮かばないときは、サイコロのアイコンをクリックするとランダムなプロンプト例が表示される" }
+  ]
+}
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RGBV7L04Y0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RGBV7L04Y0');
+</script>
+</head>
+<body id="top">
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
+      <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
+      <span class="sub">非公式・2026年7月8日時点</span>
+    </div>
+    <span class="theme-note">ブラウザのテーマ設定に自動対応</span>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <nav aria-label="目次">
+      <ol>
+        <li><a class="chap" href="intro.html">はじめに</a></li>
+        <li>
+          <a class="chap" href="making-music.html">曲を作る</a>
+          <ul class="sub-links">
+            <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
+            <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
+            <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
+            <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
+            <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-stem">Stem分離</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="chap" href="studio.html">Suno Studio</a>
+          <ul class="sub-links">
+            <li><a href="studio.html#st-overview">概要・動作環境</a></li>
+            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-edit">編集・録音</a></li>
+            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-export">エクスポート</a></li>
+            <li><a href="studio.html#st-updates">最近のアップデート</a></li>
+          </ul>
+        </li>
+        <li><a class="chap" href="mobile.html">モバイルアプリ</a></li>
+        <li><a class="chap" href="billing.html">アカウントと請求</a></li>
+        <li><a class="chap" href="rights.html">権利と著作権</a></li>
+        <li><a class="chap" href="hooks.html">Hooks</a></li>
+        <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
+        <li><a class="chap" href="glossary.html">用語集</a></li>
+        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+      </ol>
+    </nav>
+    <div class="sidebar-footer">
+      本ページはSuno, Inc.公式の文書ではありません。最新情報は<br>
+      <a href="https://help.suno.com/en">help.suno.com</a> でご確認ください。
+    </div>
+  </aside>
+
+  <main>
+    <div class="content">
+
+      <p class="breadcrumb"><a href="index.html">Suno AI 日本語マニュアル</a> ＞ はじめに</p>
+      <p class="eyebrow">Chapter 01</p>
+      <h1>Suno AIとは?初めての曲の作り方</h1>
+
+      <h2>Sunoとは</h2>
+      <p>Suno は、テキストによる説明だけで楽曲を生成できるAI作曲サービスです。2023年にDiscord上でのサービスとして始まり、その後 suno.com で直接利用できるようになりました。ジャンルや歌詞、雰囲気を文章で伝えるだけで、数十秒〜数分のオリジナル楽曲を作ることができます。</p>
+      <p>さらに上位機能として <span class="term">Suno Studio</span>(複数トラックを編集できるDAW的なワークスペース。詳しくは<a href="studio.html">Suno Studio</a>の章)を使えば、生成した楽曲をより緻密に編集・仕上げることも可能です。</p>
+
+      <h2>Simple Modeで最初の一曲を作る方法</h2>
+      <p>一番手軽に曲を作る方法は <span class="term">Simple Mode</span>(シンプルモード)です。</p>
+      <ol>
+        <li><a href="https://suno.com/create">suno.com/create</a> にアクセスし、Simple を選択</li>
+        <li>聴きたい曲の説明を入力する(例:「A synth pop song about having fun all night」のように、ジャンルや雰囲気を一言で)</li>
+        <li>アイデアが浮かばないときは、サイコロのアイコンをクリックするとランダムなプロンプト例が表示される</li>
+      </ol>
+      <p>これだけで、AIが2種類のバージョンを生成してくれます。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2462273">Make a song in Simple Mode</a></blockquote>
+
+      <h2>Custom Modeで自分の歌詞を使って曲を作る方法</h2>
+      <p>もっと細かく指定したい場合は <span class="term">Custom Mode</span>(カスタムモード)を使います。suno.com/create または左側ツールバーの Create アイコンから、上部の Custom を選択すると、歌詞入力欄など詳細な指定項目が追加されます。</p>
+      <p>どちらのモードを使っても、自分で入力したオリジナルの歌詞についての権利は自分自身に残ります(詳しくは<a href="rights.html">権利と著作権</a>の章)。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2415873">Can I use my own lyrics?</a></blockquote>
+
+      <h2>Sunoで作れる曲の長さ(モデル別の上限)</h2>
+      <p>Sunoのモデル(バージョン)によって、一度に生成できる曲の長さの上限が異なります。</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>モデル</th><th>初回生成の最大長</th></tr></thead>
+        <tbody>
+          <tr><td>V2</td><td>1分20秒</td></tr>
+          <tr><td>V3</td><td>2分</td></tr>
+          <tr><td>V3.5 / V4</td><td>4分</td></tr>
+          <tr><td>V4.5 / V5</td><td>8分</td></tr>
+        </tbody>
+      </table></div>
+      <p>モデルの選択は、Custom Mode横のモデル選択メニューから行えます。上限を超えて曲を伸ばしたい場合は、後述の <span class="term">Extend</span>(エクステンド)機能を使うことで曲の続きを追加できます。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2409473">How long will my song be?</a></blockquote>
+
+      <div class="chapter-banner">
+        <a href="https://mastinchannel.com" target="_blank" rel="noopener noreferrer">
+          <picture>
+            <source media="(max-width: 480px)" srcset="assets/mastinchannel-banner-320x50.jpg">
+            <img src="assets/mastinchannel-banner-728x90.jpg" width="728" height="90" alt="mastin channel — 歌ものフリー音楽 使い放題" loading="lazy">
+          </picture>
+        </a>
+      </div>
+
+      <div class="end-nav">
+        <a href="index.html">← 目次トップへ</a>
+        <a href="making-music.html">曲を作る →</a>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<a class="back-top" href="#top" aria-label="ページ先頭へ">↑</a>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navToggle');
+    var sidebar = document.getElementById('sidebar');
+    toggle.addEventListener('click', function(){
+      var open = sidebar.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    sidebar.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.innerWidth <= 880) {
+        sidebar.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    var here = location.pathname.split('/').pop() || 'index.html';
+    Array.prototype.forEach.call(document.querySelectorAll('.sidebar a.chap'), function(a){
+      var target = a.getAttribute('href').split('#')[0] || 'index.html';
+      if (target === here) a.classList.add('active');
+    });
+  })();
+</script>
+</body>
+</html>
