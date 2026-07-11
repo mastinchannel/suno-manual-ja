@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suno.mastinchannel.com/sitemap.xml
