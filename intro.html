@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Suno AIとは?初めての曲の作り方(Simple Mode・Custom Mode) - Suno AI 日本語マニュアル(非公式)</title>
-<meta name="description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
+<meta name="description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、v6・v6-wild・v6-miniの違いと曲の長さを解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
 <link rel="canonical" href="https://suno.mastinchannel.com/intro.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
@@ -14,14 +14,14 @@
 <meta property="og:site_name" content="Suno AI 日本語マニュアル(非公式)">
 <meta property="og:url" content="https://suno.mastinchannel.com/intro.html">
 <meta property="og:title" content="Suno AIとは?初めての曲の作り方(Simple Mode・Custom Mode)">
-<meta property="og:description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
+<meta property="og:description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、v6・v6-wild・v6-miniの違いと曲の長さを解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
 <meta property="og:image" content="https://suno.mastinchannel.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1520">
 <meta property="og:image:height" content="800">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Suno AIとは?初めての曲の作り方(Simple Mode・Custom Mode)">
-<meta name="twitter:description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
+<meta name="twitter:description" content="Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、v6・v6-wild・v6-miniの違いと曲の長さを解説。初めてSunoを使う人向けの非公式日本語ガイドです。">
 <meta name="twitter:image" content="https://suno.mastinchannel.com/assets/og-image.jpg">
 
 <script type="application/ld+json">
@@ -39,10 +39,10 @@
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Suno AIとは?初めての曲の作り方",
-  "description": "Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説する日本語ガイド。",
+  "description": "Suno AIの基本と、Simple Mode・Custom Modeでの曲の作り方、v6・v6-wild・v6-miniの違いと曲の長さを解説する日本語ガイド。",
   "inLanguage": "ja",
   "datePublished": "2026-07-08",
-  "dateModified": "2026-07-12",
+  "dateModified": "2026-10-20",
   "url": "https://suno.mastinchannel.com/intro.html",
   "mainEntityOfPage": "https://suno.mastinchannel.com/intro.html",
   "image": "https://suno.mastinchannel.com/assets/og-image.jpg",
@@ -79,7 +79,7 @@
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
       <div class="brand-text">
         <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
-        <span class="sub">非公式・2026年7月8日時点</span>
+        <span class="sub">非公式・2026年10月20日時点</span>
       </div>
     </div>
   </div>
@@ -93,12 +93,14 @@
         <li>
           <a class="chap" href="making-music.html">曲を作る</a>
           <ul class="sub-links">
+            <li><a href="making-music.html#mm-v6">v6でできること</a></li>
             <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
             <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
             <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
             <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
             <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
-            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理・Albums</a></li>
+            <li><a href="making-music.html#mm-download">ダウンロード上限</a></li>
             <li><a href="making-music.html#mm-stem">Stem分離</a></li>
           </ul>
         </li>
@@ -106,9 +108,11 @@
           <a class="chap" href="studio.html">Suno Studio</a>
           <ul class="sub-links">
             <li><a href="studio.html#st-overview">概要・動作環境</a></li>
-            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-basics">基本操作・ショートカット</a></li>
+            <li><a href="studio.html#st-chat">Studio Chat</a></li>
+            <li><a href="studio.html#st-midi">MIDI・シンセ</a></li>
             <li><a href="studio.html#st-edit">編集・録音</a></li>
-            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-mix">エフェクト・オートメーション</a></li>
             <li><a href="studio.html#st-export">エクスポート</a></li>
             <li><a href="studio.html#st-updates">最近のアップデート</a></li>
           </ul>
@@ -119,7 +123,7 @@
         <li><a class="chap" href="hooks.html">Hooks</a></li>
         <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
         <li><a class="chap" href="glossary.html">用語集</a></li>
-        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+        <li><a class="chap" href="appendix.html">付録:更新履歴</a></li>
       </ol>
     </nav>
     <div class="sidebar-footer">
@@ -147,6 +151,7 @@
         <li>アイデアが浮かばないときは、サイコロのアイコンをクリックするとランダムなプロンプト例が表示される</li>
       </ol>
       <p>これだけで、AIが2種類のバージョンを生成してくれます。</p>
+      <p>v6では Simple Mode の表現力が大きく上がりました。複雑なスタイルの指示をまとめて書けるほか、Sunoの曲・プレイリスト・アップロード音源・画像・動画を1つのプロンプトで参照できます。Cover・Remix・Extendのどれを使うべきかを知らなくても、やりたいことを書けばモデルが手順を判断してくれます(詳しくは<a href="making-music.html#mm-v6">v6でできること</a>)。</p>
       <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2462273">Make a song in Simple Mode</a></blockquote>
 
       <h2>Custom Modeで自分の歌詞を使って曲を作る方法</h2>
@@ -154,19 +159,34 @@
       <p>どちらのモードを使っても、自分で入力したオリジナルの歌詞についての権利は自分自身に残ります(詳しくは<a href="rights.html">権利と著作権</a>の章)。</p>
       <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2415873">Can I use my own lyrics?</a></blockquote>
 
-      <h2>Sunoで作れる曲の長さ(モデル別の上限)</h2>
-      <p>Sunoのモデル(バージョン)によって、一度に生成できる曲の長さの上限が異なります。</p>
+      <h2 id="models">Sunoのモデル(v6・v6-wild・v6-mini)の選び方</h2>
+      <p>2026年9月9日から、Sunoの曲は <span class="term">v6</span> 世代のモデルで作られます。v6はWMG・BMGなどのパートナーを含むアーティストやプロデューサーと協力して開発された最初のモデルで、それ以前のモデル(v5.5以前)はすべて新規生成には使えなくなりました。</p>
       <div class="table-wrap"><table>
-        <thead><tr><th>モデル</th><th>初回生成の最大長</th></tr></thead>
+        <thead><tr><th>モデル</th><th>特徴</th><th>使えるプラン</th></tr></thead>
         <tbody>
-          <tr><td>V2</td><td>1分20秒</td></tr>
-          <tr><td>V3</td><td>2分</td></tr>
-          <tr><td>V3.5 / V4</td><td>4分</td></tr>
-          <tr><td>V4.5 / V5</td><td>8分</td></tr>
+          <tr><td><strong>v6</strong></td><td>主力モデル。ジャンルを問わず安定して狙いどおりの仕上がりになりやすい。迷ったらこれ</td><td>Pro / Premier</td></tr>
+          <tr><td><strong>v6-wild</strong></td><td>実験向け。予想外の展開やジャンルの混ぜ合わせなど、プロンプトから離れた意外な結果が出やすい</td><td>Pro / Premier</td></tr>
+          <tr><td><strong>v6-mini</strong></td><td>軽くて速いモデル。アイデア出しや大量に試したいときに向く</td><td>全プラン(無料を含む)</td></tr>
+          <tr><td>Custom Models</td><td>自分の楽曲で調整した専用モデル(v6ベース)</td><td>Pro / Premier</td></tr>
         </tbody>
       </table></div>
-      <p>モデルの選択は、Custom Mode横のモデル選択メニューから行えます。上限を超えて曲を伸ばしたい場合は、後述の <span class="term">Extend</span>(エクステンド)機能を使うことで曲の続きを追加できます。</p>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2409473">How long will my song be?</a></blockquote>
+      <p>モデルは Create フォーム右上のモデル選択メニューから切り替えます。選んだモデルは、次に変更するまで保持されます。Voices・Custom Models・My Taste を使う場合は、対応するモデルが選ばれているか確認してください。</p>
+      <p>1回の生成で2曲が作られ、消費は合計10クレジットです(v5.5と同じ)。ただし、プロンプトに画像や動画をたくさん入れると消費が増えます。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/13924737">Current Models: v6</a> / <a href="https://help.suno.com/en/articles/13924993">How do I change models?</a> / <a href="https://help.suno.com/en/articles/13924481">v6 FAQ</a></blockquote>
+
+      <h2>Sunoで作れる曲の長さ</h2>
+      <p>v6・v6-wild・v6-mini のどれでも、1回の生成で<strong>最大8分</strong>の曲を作れます。さらに続きを足したい場合は <span class="term">Extend</span>(エクステンド)機能で曲の終わりから延長できます(<a href="making-music.html#mm-edit">曲を編集する</a>を参照)。</p>
+      <p>過去のモデルの上限は、V2が1分20秒、V3が2分、V3.5/V4が4分、V4.5以降が8分でした(<a href="appendix.html">付録:更新履歴</a>)。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/13924929">How long will my song be?</a></blockquote>
+
+      <h2>古いモデルで作った曲はどうなる?</h2>
+      <ul>
+        <li>過去のモデルで作った曲はライブラリにそのまま残り、再生・共有・Remaster・Coverができます。</li>
+        <li>古い曲をもとにExtendやRemixなどを行うと、新しい部分はv6系モデルで作られるため、元の曲と雰囲気が変わることがあります(元の曲は変更されません)。</li>
+        <li>Custom Modelsは自動的にv6ベースにアップグレードされます。v5.5時代のCustom Modelで作った曲はそのまま残ります。</li>
+        <li>旧モデルの作り方に近づける方法は、公式のチュートリアル動画で紹介されています。</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/13924481">v6 FAQ</a></blockquote>
 
       <div class="chapter-banner">
         <a href="https://mastinchannel.com" target="_blank" rel="noopener noreferrer">

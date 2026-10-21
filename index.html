@@ -10,10 +10,12 @@
     'mm-edit':'making-music.html#mm-edit','mm-material':'making-music.html#mm-material',
     'mm-prompt':'making-music.html#mm-prompt','mm-persona':'making-music.html#mm-persona',
     'mm-remix':'making-music.html#mm-remix','mm-manage':'making-music.html#mm-manage',
-    'mm-stem':'making-music.html#mm-stem','studio':'studio.html',
+    'mm-stem':'making-music.html#mm-stem','mm-v6':'making-music.html#mm-v6',
+    'mm-download':'making-music.html#mm-download','studio':'studio.html',
     'st-overview':'studio.html#st-overview','st-basics':'studio.html#st-basics',
     'st-edit':'studio.html#st-edit','st-mix':'studio.html#st-mix',
     'st-export':'studio.html#st-export','st-updates':'studio.html#st-updates',
+    'st-chat':'studio.html#st-chat','st-midi':'studio.html#st-midi',
     'mobile':'mobile.html','billing':'billing.html','rights':'rights.html',
     'hooks':'hooks.html','community':'community.html','glossary':'glossary.html',
     'appendix':'appendix.html'
@@ -23,7 +25,7 @@
 })();
 </script>
 <title>Suno AI 日本語マニュアル(非公式) — 使い方・Studio・権利をまとめて解説</title>
-<meta name="description" content="Suno AIの使い方を日本語で解説する非公式マニュアル。曲の作り方、Suno Studio、Persona・Voices、Stem分離、権利と著作権まで全10章・用語集付きで網羅しています。">
+<meta name="description" content="Suno AIの使い方を日本語で解説する非公式マニュアル。v6モデル、曲の作り方、Suno Studio 2.0、Voices、ダウンロード上限、権利と著作権まで全10章・用語集付きで網羅しています。">
 <link rel="canonical" href="https://suno.mastinchannel.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
@@ -33,14 +35,14 @@
 <meta property="og:site_name" content="Suno AI 日本語マニュアル(非公式)">
 <meta property="og:url" content="https://suno.mastinchannel.com/">
 <meta property="og:title" content="Suno AI 日本語マニュアル(非公式)">
-<meta property="og:description" content="Suno AIの使い方を日本語で解説する非公式マニュアル。曲の作り方、Suno Studio、Persona・Voices、Stem分離、権利と著作権まで全10章・用語集付きで網羅しています。">
+<meta property="og:description" content="Suno AIの使い方を日本語で解説する非公式マニュアル。v6モデル、曲の作り方、Suno Studio 2.0、Voices、ダウンロード上限、権利と著作権まで全10章・用語集付きで網羅しています。">
 <meta property="og:image" content="https://suno.mastinchannel.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1520">
 <meta property="og:image:height" content="800">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Suno AI 日本語マニュアル(非公式)">
-<meta name="twitter:description" content="Suno AIの使い方を日本語で解説する非公式マニュアル。曲の作り方、Suno Studio、Persona・Voices、Stem分離、権利と著作権まで全10章・用語集付きで網羅しています。">
+<meta name="twitter:description" content="Suno AIの使い方を日本語で解説する非公式マニュアル。v6モデル、曲の作り方、Suno Studio 2.0、Voices、ダウンロード上限、権利と著作権まで全10章・用語集付きで網羅しています。">
 <meta name="twitter:image" content="https://suno.mastinchannel.com/assets/og-image.jpg">
 
 <script type="application/ld+json">
@@ -69,7 +71,7 @@
     { "@type": "ListItem", "position": 7, "name": "Hooks", "url": "https://suno.mastinchannel.com/hooks.html" },
     { "@type": "ListItem", "position": 8, "name": "コミュニティ・リソース", "url": "https://suno.mastinchannel.com/community.html" },
     { "@type": "ListItem", "position": 9, "name": "用語集", "url": "https://suno.mastinchannel.com/glossary.html" },
-    { "@type": "ListItem", "position": 10, "name": "付録:モデル更新履歴", "url": "https://suno.mastinchannel.com/appendix.html" }
+    { "@type": "ListItem", "position": 10, "name": "付録:更新履歴", "url": "https://suno.mastinchannel.com/appendix.html" }
   ]
 }
 </script>
@@ -90,7 +92,7 @@
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
       <div class="brand-text">
         <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
-        <span class="sub">非公式・2026年7月8日時点</span>
+        <span class="sub">非公式・2026年10月20日時点</span>
       </div>
     </div>
   </div>
@@ -104,12 +106,14 @@
         <li>
           <a class="chap" href="making-music.html">曲を作る</a>
           <ul class="sub-links">
+            <li><a href="making-music.html#mm-v6">v6でできること</a></li>
             <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
             <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
             <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
             <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
             <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
-            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理・Albums</a></li>
+            <li><a href="making-music.html#mm-download">ダウンロード上限</a></li>
             <li><a href="making-music.html#mm-stem">Stem分離</a></li>
           </ul>
         </li>
@@ -117,9 +121,11 @@
           <a class="chap" href="studio.html">Suno Studio</a>
           <ul class="sub-links">
             <li><a href="studio.html#st-overview">概要・動作環境</a></li>
-            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-basics">基本操作・ショートカット</a></li>
+            <li><a href="studio.html#st-chat">Studio Chat</a></li>
+            <li><a href="studio.html#st-midi">MIDI・シンセ</a></li>
             <li><a href="studio.html#st-edit">編集・録音</a></li>
-            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-mix">エフェクト・オートメーション</a></li>
             <li><a href="studio.html#st-export">エクスポート</a></li>
             <li><a href="studio.html#st-updates">最近のアップデート</a></li>
           </ul>
@@ -130,7 +136,7 @@
         <li><a class="chap" href="hooks.html">Hooks</a></li>
         <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
         <li><a class="chap" href="glossary.html">用語集</a></li>
-        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+        <li><a class="chap" href="appendix.html">付録:更新履歴</a></li>
       </ol>
     </nav>
     <div class="sidebar-footer">
@@ -145,9 +151,9 @@
       <div class="cover">
         <p class="kicker">Unofficial Japanese Guide</p>
         <h1>Suno AI 日本語マニュアル</h1>
-        <p class="lead">Suno公式ヘルプセンター(help.suno.com/en・全113記事)とSuno Studio紹介ページの内容を、日本語で再構成・翻訳した非公式マニュアルです。</p>
+        <p class="lead">Suno公式ヘルプセンター(help.suno.com/en・全136記事)と公式リリースノートの内容を、日本語で再構成・翻訳した非公式マニュアルです。</p>
         <div class="meta-row">
-          <span class="pill">情報取得日: 2026-07-08</span>
+          <span class="pill">情報取得日: 2026-10-20</span>
           <span class="pill">全10章 + 用語集・付録</span>
           <span class="pill">非公式・個人利用向け</span>
         </div>
@@ -157,45 +163,56 @@
         <strong>このマニュアルについて。</strong> Suno, Inc. による公式文書ではありません。Sunoは機能追加・変更が頻繁なサービスのため、特に「曲を作る」の章やモデル関連の記述は時間の経過とともに古くなる可能性があります。最新情報は必ず原文でご確認ください。Suno独自の機能名(<span class="term">Simple Mode</span>、<span class="term">Persona</span>、<span class="term">Extend</span> など)は英語表記のまま残し、初出時に日本語で補足しています。表記は<a href="glossary.html">用語集</a>にまとめています。各項目の末尾に元記事へのリンクがあります。
       </div>
 
+      <div class="callout warn">
+        <strong>2026年7月〜10月の大きな変更</strong>
+        <ul>
+          <li><a href="intro.html#models">v6モデル</a>(v6・v6-wild・v6-mini)が登場し、旧モデルは新規生成を終了</li>
+          <li>2026年9月3日から<a href="making-music.html#mm-download">ダウンロードに上限</a>(Free 7曲・Pro 月20曲・Premier 月60曲)</li>
+          <li>同日の規約改定で、<a href="rights.html">商用利用は「有料プラン中のダウンロード」が条件</a>に</li>
+          <li><a href="studio.html">Suno Studio 2.0</a>(チャット・MIDI・シンセ・エフェクト)</li>
+          <li><a href="making-music.html#mm-manage">Albums</a>・Shareable Workspaces・Speech(β)などを追加</li>
+        </ul>
+      </div>
+
       <div class="hub-teaser">
         <p class="eyebrow">Chapter 01</p>
         <h2><a href="intro.html" style="text-decoration:none;">Suno AIとは?初めての曲の作り方</a></h2>
-        <p>Suno AIの基本、Simple Mode・Custom Modeでの曲の作り方、モデルごとの曲の長さの上限を解説します。初めてSunoを使う方はここから。</p>
+        <p>Suno AIの基本、Simple Mode・Custom Modeでの曲の作り方、v6・v6-wild・v6-miniの違いと曲の長さを解説します。初めてSunoを使う方はここから。</p>
         <a class="more" href="intro.html">続きを読む →</a>
       </div>
 
       <div class="hub-teaser">
         <p class="eyebrow">Chapter 02</p>
         <h2><a href="making-music.html" style="text-decoration:none;">Sunoで曲を作る方法まとめ</a></h2>
-        <p>Extendで曲を伸ばす、Crop・Replace Sectionで編集する、Persona・Voicesで声やスタイルを再利用する、Stem分離やRemix・Coverの権利関係まで、曲作りの全操作をまとめています。</p>
+        <p>v6でできること、Extend・Replace Sectionでの編集、Persona・Voices、Albums、ダウンロード上限、Stem分離まで、曲作りの全操作をまとめています。</p>
         <a class="more" href="making-music.html">続きを読む →</a>
       </div>
 
       <div class="hub-teaser">
         <p class="eyebrow">Chapter 03</p>
-        <h2><a href="studio.html" style="text-decoration:none;">Suno Studioの使い方まとめ</a></h2>
-        <p>AIとDAWを融合したブラウザ完結型のワークスペース。基本操作からEQ・ミキシング、Export(書き出し)まで解説します。</p>
+        <h2><a href="studio.html" style="text-decoration:none;">Suno Studio 2.0の使い方まとめ</a></h2>
+        <p>AIとDAWを融合したブラウザ完結型の制作環境。チャットバー、MIDI・Wavetableシンセ、エフェクト・自作プラグイン、オートメーション、Export(書き出し)まで解説します。</p>
         <a class="more" href="studio.html">続きを読む →</a>
       </div>
 
       <div class="hub-teaser">
         <p class="eyebrow">Chapter 04</p>
         <h2><a href="mobile.html" style="text-decoration:none;">Sunoモバイルアプリの使い方(iOS・Android)</a></h2>
-        <p>iOS・Android版アプリでのサインイン方法、画面構成、曲の作り方、サブスクリプション解約、アカウント削除の手順を紹介します。</p>
+        <p>iOS・Android版アプリでのサインイン方法、画面構成、曲の作り方、サブスクリプション解約、アカウント削除の手順と、Voices・オフライン再生などの最新機能を紹介します。</p>
         <a class="more" href="mobile.html">続きを読む →</a>
       </div>
 
       <div class="hub-teaser">
         <p class="eyebrow">Chapter 05</p>
         <h2><a href="billing.html" style="text-decoration:none;">Sunoのアカウント・請求・解約・返金ガイド</a></h2>
-        <p>プランの種類とクレジットの仕組み、支払い方法、解約・返金、よくあるログイントラブルの対処法をまとめています。</p>
+        <p>プランの種類とクレジット・ダウンロード数、支払い方法、解約・返金、よくあるログイントラブルの対処法をまとめています。</p>
         <a class="more" href="billing.html">続きを読む →</a>
       </div>
 
       <div class="hub-teaser">
         <p class="eyebrow">Chapter 06</p>
         <h2><a href="rights.html" style="text-decoration:none;">Suno AIの著作権と商用利用ルール</a></h2>
-        <p>商用利用権と所有権の違い、歌詞の権利、Remix・Extendの権利関係など、収益化を考える前に知っておきたいルールを解説します。</p>
+        <p>2026年9月の規約改定で変わったダウンロードと商用利用の関係、所有権、歌詞の権利、Remix・Extendの権利関係など、収益化の前に知っておきたいルールを解説します。</p>
         <a class="more" href="rights.html">続きを読む →</a>
       </div>
 
@@ -222,8 +239,8 @@
 
       <div class="hub-teaser">
         <p class="eyebrow">Chapter 10 · Appendix</p>
-        <h2><a href="appendix.html" style="text-decoration:none;">Sunoモデルバージョン更新履歴(V2〜v5.5)</a></h2>
-        <p>V2からv5.5まで、Sunoのモデルバージョンごとの主な追加機能をリリースノート形式でまとめています。</p>
+        <h2><a href="appendix.html" style="text-decoration:none;">Sunoモデル・機能の更新履歴(V2〜v6)</a></h2>
+        <p>V2からv6まで、Sunoのモデルバージョンごとの主な追加機能と、2026年7月以降のリリースノートをまとめています。</p>
         <a class="more" href="appendix.html">続きを読む →</a>
       </div>
 

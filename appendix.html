@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sunoモデルバージョン更新履歴(V2〜v5.5) - Suno AI 日本語マニュアル(非公式)</title>
-<meta name="description" content="Suno AIのモデルバージョン(V2〜v5.5)の更新履歴とリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
+<title>Sunoモデル・機能の更新履歴(V2〜v6) - Suno AI 日本語マニュアル(非公式)</title>
+<meta name="description" content="Suno AIのモデルバージョン(V2〜v6)の更新履歴と、2026年7月以降のリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
 <link rel="canonical" href="https://suno.mastinchannel.com/appendix.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
@@ -13,15 +13,15 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="Suno AI 日本語マニュアル(非公式)">
 <meta property="og:url" content="https://suno.mastinchannel.com/appendix.html">
-<meta property="og:title" content="Sunoモデルバージョン更新履歴(V2〜v5.5)">
-<meta property="og:description" content="Suno AIのモデルバージョン(V2〜v5.5)の更新履歴とリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
+<meta property="og:title" content="Sunoモデル・機能の更新履歴(V2〜v6)">
+<meta property="og:description" content="Suno AIのモデルバージョン(V2〜v6)の更新履歴と、2026年7月以降のリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
 <meta property="og:image" content="https://suno.mastinchannel.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1520">
 <meta property="og:image:height" content="800">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sunoモデルバージョン更新履歴(V2〜v5.5)">
-<meta name="twitter:description" content="Suno AIのモデルバージョン(V2〜v5.5)の更新履歴とリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
+<meta name="twitter:title" content="Sunoモデル・機能の更新履歴(V2〜v6)">
+<meta name="twitter:description" content="Suno AIのモデルバージョン(V2〜v6)の更新履歴と、2026年7月以降のリリースノートをまとめて解説。各バージョンの主な追加機能を非公式日本語ガイドで紹介します。">
 <meta name="twitter:image" content="https://suno.mastinchannel.com/assets/og-image.jpg">
 
 <script type="application/ld+json">
@@ -30,7 +30,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Suno AI 日本語マニュアル", "item": "https://suno.mastinchannel.com/" },
-    { "@type": "ListItem", "position": 2, "name": "付録:モデル更新履歴", "item": "https://suno.mastinchannel.com/appendix.html" }
+    { "@type": "ListItem", "position": 2, "name": "付録:更新履歴", "item": "https://suno.mastinchannel.com/appendix.html" }
   ]
 }
 </script>
@@ -38,11 +38,11 @@
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Sunoモデルバージョン更新履歴(V2〜v5.5)",
-  "description": "Suno AIのモデルバージョン(V2〜v5.5)の更新履歴とリリースノートをまとめて解説する日本語ガイド。",
+  "headline": "Sunoモデル・機能の更新履歴(V2〜v6)",
+  "description": "Suno AIのモデルバージョン(V2〜v6)の更新履歴と2026年7月以降のリリースノートをまとめて解説する日本語ガイド。",
   "inLanguage": "ja",
   "datePublished": "2026-07-08",
-  "dateModified": "2026-07-12",
+  "dateModified": "2026-10-20",
   "url": "https://suno.mastinchannel.com/appendix.html",
   "mainEntityOfPage": "https://suno.mastinchannel.com/appendix.html",
   "image": "https://suno.mastinchannel.com/assets/og-image.jpg",
@@ -67,7 +67,7 @@
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
       <div class="brand-text">
         <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
-        <span class="sub">非公式・2026年7月8日時点</span>
+        <span class="sub">非公式・2026年10月20日時点</span>
       </div>
     </div>
   </div>
@@ -81,12 +81,14 @@
         <li>
           <a class="chap" href="making-music.html">曲を作る</a>
           <ul class="sub-links">
+            <li><a href="making-music.html#mm-v6">v6でできること</a></li>
             <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
             <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
             <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
             <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
             <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
-            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理・Albums</a></li>
+            <li><a href="making-music.html#mm-download">ダウンロード上限</a></li>
             <li><a href="making-music.html#mm-stem">Stem分離</a></li>
           </ul>
         </li>
@@ -94,9 +96,11 @@
           <a class="chap" href="studio.html">Suno Studio</a>
           <ul class="sub-links">
             <li><a href="studio.html#st-overview">概要・動作環境</a></li>
-            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-basics">基本操作・ショートカット</a></li>
+            <li><a href="studio.html#st-chat">Studio Chat</a></li>
+            <li><a href="studio.html#st-midi">MIDI・シンセ</a></li>
             <li><a href="studio.html#st-edit">編集・録音</a></li>
-            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-mix">エフェクト・オートメーション</a></li>
             <li><a href="studio.html#st-export">エクスポート</a></li>
             <li><a href="studio.html#st-updates">最近のアップデート</a></li>
           </ul>
@@ -107,7 +111,7 @@
         <li><a class="chap" href="hooks.html">Hooks</a></li>
         <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
         <li><a class="chap" href="glossary.html">用語集</a></li>
-        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+        <li><a class="chap" href="appendix.html">付録:更新履歴</a></li>
       </ol>
     </nav>
     <div class="sidebar-footer">
@@ -119,10 +123,10 @@
   <main>
     <div class="content">
 
-      <p class="breadcrumb"><a href="index.html">Suno AI 日本語マニュアル</a> ＞ 付録:モデル更新履歴</p>
+      <p class="breadcrumb"><a href="index.html">Suno AI 日本語マニュアル</a> ＞ 付録:更新履歴</p>
       <p class="eyebrow">Chapter 10 · Appendix</p>
-      <h1>Sunoモデルバージョン更新履歴(V2〜v5.5)</h1>
-      <p>この付録は、Sunoのモデル(生成AIエンジン)がどう進化してきたかという「リリースノート」的な内容をまとめたものです。本編で紹介した機能の多くは、ここに挙げるバージョンアップの中で追加されたものです。バージョン名や日付は今後も更新され続けるため、あくまで参考の記録としてご覧ください。</p>
+      <h1>Sunoモデル・機能の更新履歴(V2〜v6)</h1>
+      <p>この付録は、Sunoのモデル(生成AIエンジン)がどう進化してきたかと、最近の主な機能追加をまとめたものです。本編で紹介した機能の多くは、ここに挙げるバージョンアップの中で追加されたものです。バージョン名や日付は今後も更新され続けるため、あくまで参考の記録としてご覧ください。</p>
 
       <h2>モデルタイムライン一覧</h2>
       <div class="table-wrap"><table>
@@ -135,20 +139,22 @@
           <tr><td>V4.5</td><td>2025年5月</td><td>初回生成最大8分、プロンプト追従性向上、ジャンルのマッシュアップが得意に</td></tr>
           <tr><td>V4.5+(Artist Update)</td><td>2025年7月</td><td>Song Editor・Stem抽出(8種)・最大8分アップロード・Creative Slidersを追加</td></tr>
           <tr><td>V5</td><td>2025年9月</td><td>音質・ボーカルのリアリティが大幅向上</td></tr>
-          <tr><td>V5.5</td><td>2025年頃</td><td>Voices・Custom Models・My Tasteを追加</td></tr>
+          <tr><td>v5.5</td><td>2026年3月</td><td>Voices・Custom Models・My Tasteを追加</td></tr>
+          <tr><td><strong>v6 / v6-wild / v6-mini</strong></td><td>2026年9月9日</td><td>3種類のモデル構成。言葉での部分編集、複数素材のマッシュアップ、画像・動画からの作曲、Max Mode。最大8分。旧モデルは新規生成を終了</td></tr>
         </tbody>
       </table></div>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/5782721">Suno Model Timeline & Information</a></blockquote>
+      <p>※ 2026年7月時点で参照していた公式の「Model Timeline」記事や、V4・V4.5・V5・v5.5の紹介記事は、v6の公開にあわせて公式ヘルプから削除されました。以下のV5.5までの概要は、当時の記事をもとにした記録です。</p>
+      <blockquote class="source">出典: Suno Model Timeline & Information(削除済み) / <a href="https://www.digitalmusicnews.com/2026/03/26/suno-launches-version-5-5/">Digital Music News(v5.5の公開日)</a> / <a href="https://suno.com/release-notes/introducing-v6">Introducing v6</a>(リリースノート)</blockquote>
 
       <h2>各バージョンの概要</h2>
 
       <h3>V4:よりクリアな音質とツールの拡充</h3>
       <p>より綺麗な音質、より的確な歌詞、より動きのある曲構成を実現。新機能として Remaster(どのモデルで作った曲にも使える音質調整)、新しい歌詞モデル ReMi(既存のClassicモデルと選択可能)、より洗練されたアルバムアート生成が追加され、CoverやPersonaの精度も向上しました。</p>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/3593281">Suno V4 - What's New?</a></blockquote>
+      <blockquote class="source">出典: Suno V4 - What's New?(削除済み)</blockquote>
 
       <h3>V4.5:ジャンル理解とボーカル表現の強化</h3>
       <p>ジャンルの選択肢が拡大し、ジャンルのマッシュアップ(例:ミッドウェストエモ×ネオソウル)がより自然に。ボーカルの深みや感情表現が向上し、細かい質感の指示もより忠実に反映されるようになりました。プロンプト強化ボタン(Enhance)が追加され、CoverとPersonaを組み合わせて使えるようにもなりました。初回生成の上限が4分から8分に延長。</p>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/5782593">What's new in V4.5</a></blockquote>
+      <blockquote class="source">出典: What's new in V4.5(削除済み)</blockquote>
 
       <h3>Artist Update(V4.5+):プロ向け編集ツール</h3>
       <p>Song Editor(セクション単位の波形編集)、8種類のクリーンなStem抽出、最大8分の音源アップロード、Creative Slidersの3種のコントロールが、Pro/Premierユーザー向けに追加されました。</p>
@@ -156,25 +162,60 @@
 
       <h3>V5:技術基盤の刷新</h3>
       <p>Sunoとして「これまでで最も大きな技術的飛躍」と位置づけるアップデート。30秒の短いフックから8分の大作まで一貫した構成、ユーザーの好みに合わせて調整するクリエイティブ・インテリジェンス、摩擦の少ないワークフロー、複数世代にわたって声や楽器の個性を保持する仕組み、テンポ・キー・ダイナミクスなどを細かく制御できるプロフェッショナル向けコントロール、そして従来比10倍高速な生成が特徴です。</p>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/8105153">Introducing v5</a></blockquote>
+      <blockquote class="source">出典: Introducing v5(削除済み)</blockquote>
 
-      <h3>V5.5:Voices・Custom Models・My Tasteを追加</h3>
-      <p>これまでで最も表現力が高く、パーソナライズされたモデルと位置づけられています。</p>
+      <h3>v5.5:Voices・Custom Models・My Tasteを追加</h3>
+      <p>2026年3月26日公開。これまでで最も表現力が高く、パーソナライズされたモデルと位置づけられていました。</p>
       <ul>
         <li><strong>Voices</strong>:Personaをさらに発展させ、自分自身の声をSuno楽曲に反映できる機能</li>
         <li><strong>Custom Models</strong>:Pro/Premierユーザーが自分の楽曲(最低6曲)から最大3つの専用モデルを作成できる機能</li>
         <li><strong>My Taste</strong>:全ユーザー向けに、好みのジャンル・ムードを学習してスタイル提案に反映する機能</li>
       </ul>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/11362305">What's New in v5.5</a></blockquote>
+      <blockquote class="source">出典: What's New in v5.5(削除済み) / <a href="https://suno.com/blog/v5-5">Suno Blog: v5.5</a></blockquote>
 
-      <h2>モデルの整理・非推奨化について(2025年9月時点)</h2>
-      <p>Suno側の発表によると、最新技術へリソースを集中するため、一部の古いモデルが段階的に提供終了となりました。</p>
+      <h3>v6:3つのモデルと「言葉で作る」ワークフロー</h3>
+      <p>2026年9月9日公開。WMG・BMGなどのパートナーを含むアーティストやプロデューサーと協力して開発された最初のモデルで、より速く、表現力が高く、高品質になったと説明されています。</p>
       <ul>
-        <li>無料ユーザー向けのV2・V3モデルの提供終了</li>
-        <li>全ユーザー向けのRemaster v4の提供終了</li>
+        <li><strong>v6</strong>(Pro/Premier):信頼性と精度を重視した主力モデル</li>
+        <li><strong>v6-wild</strong>(Pro/Premier):予測しにくく、多彩で意外性のある結果を出す探索向けモデル</li>
+        <li><strong>v6-mini</strong>(全プラン):速くて効率的な軽量版。無料プランでもv6世代の生成が使える</li>
       </ul>
-      <p>既存の生成済みコンテンツは引き続きアクセス可能です。古いモデルを使ったプロジェクトを進行中の場合は、提供終了前に新しいモデルへの移行が推奨されていました。</p>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/7986753">Model Availability Update (Sept 11, 2025)</a></blockquote>
+      <p>曲の一部を言葉で編集、複数の素材からのマッシュアップ、リフをサンプリングしてビートを作る、雰囲気から作る、テキスト・音声・画像・動画を入力にする、歌詞を1語だけ変える、といったことができるようになりました。Custom Models・Suno Sounds・Extend・Cover・Replace Section などの機能もv6で動いています。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/13924801">What's new in v6?</a> / <a href="https://help.suno.com/en/articles/13924481">v6 FAQ</a> / <a href="https://suno.com/release-notes/introducing-v6">Introducing v6</a>(リリースノート)</blockquote>
+
+      <h2>モデルの整理・提供終了について</h2>
+      <ul>
+        <li><strong>2025年9月</strong>:無料ユーザー向けのV2・V3モデル、全ユーザー向けのRemaster v4が提供終了。</li>
+        <li><strong>2026年9月(v6公開時)</strong>:v6より前のすべてのモデルが提供終了。過去の曲はライブラリにそのまま残り、再生・共有・Remaster・Coverができます。古い曲をもとにした新しい生成はv6系モデルで行われます。</li>
+      </ul>
+      <blockquote class="source">出典: Model Availability Update (Sept 11, 2025)(削除済み) / <a href="https://help.suno.com/en/articles/13924481">v6 FAQ</a> / <a href="https://help.suno.com/en/articles/13614785">Upcoming Changes FAQ</a></blockquote>
+
+      <h2 id="release-notes">2026年7月〜10月の主なリリース</h2>
+      <p>公式リリースノートから、本マニュアルに関係する主な更新を新しい順にまとめました。</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>日付</th><th>内容</th><th>本マニュアルの該当箇所</th></tr></thead>
+        <tbody>
+          <tr><td>2026-10-15</td><td>Shareable Workspaces(Pro/Premier)、Custom Modelの共有と入力2倍(Premier)</td><td><a href="making-music.html#mm-manage">曲の管理</a></td></tr>
+          <tr><td>2026-10-08</td><td>Studio:拍の検出改善、クリップのタイムストレッチ、フェードカーブ、別ウィンドウ表示</td><td><a href="studio.html#st-updates">Studio</a></td></tr>
+          <tr><td>2026-10-05</td><td>Albums(Web・iOS・Android)</td><td><a href="making-music.html#mm-manage">曲の管理</a></td></tr>
+          <tr><td>2026-10-01</td><td>Speech(β):話し声と伴奏を同時に生成</td><td><a href="making-music.html#mm-material">素材から曲を作る</a></td></tr>
+          <tr><td>2026-09-17</td><td>Studio:MIDIの改善、外部MIDIファイルのアップロード、クリップ名の変更</td><td><a href="studio.html#st-midi">Studio</a></td></tr>
+          <tr><td>2026-09-09</td><td>v6 / v6-wild / v6-mini 公開、旧モデル提供終了</td><td><a href="intro.html#models">はじめに</a></td></tr>
+          <tr><td>2026-09-03</td><td>新しい利用規約が施行、ダウンロード上限を導入</td><td><a href="rights.html">権利と著作権</a> / <a href="making-music.html#mm-download">ダウンロード上限</a></td></tr>
+          <tr><td>2026-09-02</td><td>Studio:チャットのBPM対応、プラグインのドラッグ移動など</td><td><a href="studio.html#st-updates">Studio</a></td></tr>
+          <tr><td>2026-08-20</td><td>モバイル:オフラインプレイリスト</td><td><a href="mobile.html#mobile-updates">モバイル</a></td></tr>
+          <tr><td>2026-08-19</td><td>プレイリストの改善(シャッフル、検索、ピン留め、カバーアート)</td><td><a href="making-music.html#mm-manage">曲の管理</a></td></tr>
+          <tr><td>2026-08-13</td><td>Suno Studio 2.0 公開</td><td><a href="studio.html">Studio</a></td></tr>
+          <tr><td>2026-08-10</td><td>9月の変更(ダウンロード・モデル・規約)に関するFAQを公開</td><td><a href="community.html">コミュニティ・リソース</a></td></tr>
+          <tr><td>2026-08-07</td><td>Voicesがモバイルに対応</td><td><a href="making-music.html#mm-persona">Persona と Voice</a></td></tr>
+          <tr><td>2026-07-31</td><td>カバーアートの改善(画像+テキストで編集、動画も可)</td><td><a href="making-music.html#mm-manage">曲の管理</a></td></tr>
+          <tr><td>2026-07-20</td><td>Web版CreateにDuration(曲の長さ)スライダー(v5.5のみ対応)</td><td>—</td></tr>
+          <tr><td>2026-07-15</td><td>iOS:iMessageキーボード連携</td><td><a href="mobile.html#mobile-updates">モバイル</a></td></tr>
+          <tr><td>2026-07-09</td><td>Web版の歌詞エディター刷新(Lyricistなど)</td><td><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></td></tr>
+          <tr><td>2026-07-07</td><td>モバイル:サッカーの応援歌を作る機能</td><td><a href="mobile.html#mobile-updates">モバイル</a></td></tr>
+        </tbody>
+      </table></div>
+      <blockquote class="source">出典: <a href="https://suno.com/release-notes">Suno Release Notes</a></blockquote>
 
       <div class="chapter-banner">
         <a href="https://mastinchannel.com" target="_blank" rel="noopener noreferrer">

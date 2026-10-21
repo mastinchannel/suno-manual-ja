@@ -42,7 +42,7 @@
   "description": "Suno独自の機能名の対訳表と、プロンプト作成に役立つ音楽用語集をまとめた日本語ガイド。",
   "inLanguage": "ja",
   "datePublished": "2026-07-08",
-  "dateModified": "2026-07-12",
+  "dateModified": "2026-10-20",
   "url": "https://suno.mastinchannel.com/glossary.html",
   "mainEntityOfPage": "https://suno.mastinchannel.com/glossary.html",
   "image": "https://suno.mastinchannel.com/assets/og-image.jpg",
@@ -67,7 +67,7 @@
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
       <div class="brand-text">
         <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
-        <span class="sub">非公式・2026年7月8日時点</span>
+        <span class="sub">非公式・2026年10月20日時点</span>
       </div>
     </div>
   </div>
@@ -81,12 +81,14 @@
         <li>
           <a class="chap" href="making-music.html">曲を作る</a>
           <ul class="sub-links">
+            <li><a href="making-music.html#mm-v6">v6でできること</a></li>
             <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
             <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
             <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
             <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
             <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
-            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理・Albums</a></li>
+            <li><a href="making-music.html#mm-download">ダウンロード上限</a></li>
             <li><a href="making-music.html#mm-stem">Stem分離</a></li>
           </ul>
         </li>
@@ -94,9 +96,11 @@
           <a class="chap" href="studio.html">Suno Studio</a>
           <ul class="sub-links">
             <li><a href="studio.html#st-overview">概要・動作環境</a></li>
-            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-basics">基本操作・ショートカット</a></li>
+            <li><a href="studio.html#st-chat">Studio Chat</a></li>
+            <li><a href="studio.html#st-midi">MIDI・シンセ</a></li>
             <li><a href="studio.html#st-edit">編集・録音</a></li>
-            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-mix">エフェクト・オートメーション</a></li>
             <li><a href="studio.html#st-export">エクスポート</a></li>
             <li><a href="studio.html#st-updates">最近のアップデート</a></li>
           </ul>
@@ -107,7 +111,7 @@
         <li><a class="chap" href="hooks.html">Hooks</a></li>
         <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
         <li><a class="chap" href="glossary.html">用語集</a></li>
-        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+        <li><a class="chap" href="appendix.html">付録:更新履歴</a></li>
       </ol>
     </nav>
     <div class="sidebar-footer">
@@ -128,6 +132,9 @@
       <div class="table-wrap"><table>
         <thead><tr><th>英語表記</th><th>意味</th></tr></thead>
         <tbody>
+          <tr><td>v6 / v6-wild / v6-mini</td><td>2026年9月からのモデル(主力/実験向け/軽量・全プラン向け)</td></tr>
+          <tr><td>Max Mode</td><td>クレジットを多く使ってv6に丁寧に仕上げさせるオプション</td></tr>
+          <tr><td>Variety slider</td><td>スタイルのプロンプトを補足して出力に変化を持たせるスライダー</td></tr>
           <tr><td>Simple Mode</td><td>説明文だけで曲を作る簡易モード</td></tr>
           <tr><td>Custom Mode</td><td>歌詞・スタイル・詳細設定を自分で入力できるモード</td></tr>
           <tr><td>Extend</td><td>曲の続きを生成して長くする機能</td></tr>
@@ -138,31 +145,44 @@
           <tr><td>Reuse Prompt</td><td>過去の設定を引き継いで新しく曲を作り直す機能</td></tr>
           <tr><td>Upload Audio</td><td>自分の音源をアップロードして曲の素材にする機能</td></tr>
           <tr><td>Suno Sounds</td><td>効果音・サンプル音を生成するβ機能</td></tr>
+          <tr><td>Speech</td><td>話し声とその伴奏を一緒に作るβ版モデル</td></tr>
+          <tr><td>Vocal Gender</td><td>Custom Modeでボーカルの性別(Male/Female)を指定するオプション</td></tr>
+          <tr><td>Lyricist</td><td>お手本の歌詞を保存し、歌詞作成のスタイル参考にする機能</td></tr>
           <tr><td>Add Vocals</td><td>インストゥルメンタルにボーカルを乗せる機能</td></tr>
           <tr><td>Inspire</td><td>プレイリストの雰囲気から新曲を生成する機能</td></tr>
           <tr><td>Exclude</td><td>含めたくない要素を指定するオプション</td></tr>
           <tr><td>Creative Sliders</td><td>Weirdness・Style Influence・Audio Influenceのスライダー</td></tr>
           <tr><td>Persona</td><td>曲の声質やスタイルの「らしさ」を保存し再利用する機能</td></tr>
-          <tr><td>Voices</td><td>自分の声を学習させてSuno楽曲に反映する機能(v5.5〜)</td></tr>
-          <tr><td>Custom Models</td><td>自分の楽曲でチューニングした専用モデル(v5.5〜)</td></tr>
+          <tr><td>Voices</td><td>自分の声を登録してSuno楽曲に反映する機能(2026年3月〜、8月からモバイル対応)</td></tr>
+          <tr><td>Custom Models</td><td>自分の楽曲でチューニングした専用モデル(現在はv6ベース)</td></tr>
           <tr><td>My Taste</td><td>好みの傾向を学習し、スタイル提案に反映する機能</td></tr>
           <tr><td>Remix</td><td>Cover・Extend・Reuse Prompt等の派生操作の総称</td></tr>
           <tr><td>Cover</td><td>メロディを保ったままスタイルを変換する機能</td></tr>
-          <tr><td>Workspaces</td><td>Create画面内で曲を整理するための機能</td></tr>
+          <tr><td>Workspaces / Shareable Workspaces</td><td>Create画面内で曲を整理する機能 / 招待した人と共有できるワークスペース</td></tr>
+          <tr><td>Albums(LP / EP)</td><td>自分の曲をまとめて公開するアルバム機能(LPはフル、EPは短い作品)</td></tr>
+          <tr><td>Download / Trial downloads</td><td>曲のファイルをSuno外に保存すること。2026年9月から回数に上限 / 無料プランの生涯最大7曲のお試し枠</td></tr>
           <tr><td>Stem / Stem Separation</td><td>楽曲をボーカルや楽器パートに分離すること</td></tr>
           <tr><td>Auto Split / Split from Mix / Advanced Split</td><td>Stem分離の3モード(自動全分離/1パート抽出/自由選択分離)</td></tr>
+          <tr><td>Studio 2.0</td><td>2026年8月公開の新しいSuno Studio(MIDI・シンセ・エフェクト・チャット)</td></tr>
+          <tr><td>Chat Bar / Magic Bar</td><td>Studioに言葉で指示するチャット(旧Context Bar)/ タイムライン上に浮かぶクイック入力欄</td></tr>
+          <tr><td>MIDI / Piano Roll</td><td>音そのものではなく音符の情報 / MIDIの音符を編集するグリッド画面</td></tr>
+          <tr><td>Musical Typing</td><td>パソコンのキーボードを鍵盤として演奏する機能</td></tr>
+          <tr><td>Wavetable</td><td>Studio内蔵のシンセサイザー</td></tr>
+          <tr><td>Effects chain / Plugin</td><td>トラックに順番につなぐエフェクト / チャットで作る自作エフェクト</td></tr>
+          <tr><td>Automation</td><td>音量やエフェクトの値を曲の途中で変化させる機能</td></tr>
+          <tr><td>MIDI Learn</td><td>ハードウェアのつまみをStudioのパラメーターに割り当てる機能</td></tr>
           <tr><td>Take Lanes</td><td>Studioで生成した複数バージョンを並べて聴き比べるレーン</td></tr>
           <tr><td>Comping</td><td>Take Lanesの良い部分を組み合わせて1つにする編集手法</td></tr>
-          <tr><td>Context Bar</td><td>Studioでタイムラインの状況に応じて変わる操作バー</td></tr>
-          <tr><td>Transport</td><td>Studioの再生・録音・移動を行う操作パネル</td></tr>
-          <tr><td>Region</td><td>Studioのタイムライン上に配置される音声の単位</td></tr>
+          <tr><td>Context Bar</td><td>旧Studio(1.x)の操作バー。Studio 2.0ではChat Barに置き換え</td></tr>
+          <tr><td>Transport</td><td>Studioの再生・録音・ループ・テンポなどの操作(2.0ではタイムライン上部)</td></tr>
+          <tr><td>Region / Clip</td><td>Studioのタイムライン上に配置される音声やMIDIの単位(2.0ではClipと呼ぶ)</td></tr>
           <tr><td>Loop Recording</td><td>同じ区間を繰り返し録音し複数テイクをためる機能</td></tr>
           <tr><td>Stem Cover</td><td>Studio内のクリップを別の音・楽器に変換する機能</td></tr>
           <tr><td>Remove FX</td><td>クリップからリバーブ等のエフェクトを除去する機能</td></tr>
           <tr><td>Warp Markers</td><td>ピッチを変えずタイミングを補正する機能</td></tr>
           <tr><td>Hooks</td><td>曲と動画を組み合わせた短尺コンテンツ機能</td></tr>
           <tr><td>Link Only / Public</td><td>公開範囲設定(リンクを知る人のみ/一般公開)</td></tr>
-          <tr><td>Commercial use / Non-commercial use</td><td>商用利用可 / 非商用利用のみ、を示す権利区分</td></tr>
+          <tr><td>Commercial use / Non-commercial use</td><td>商用利用可 / 非商用利用のみ、を示す権利区分(2026年9月から商用利用は有料プラン中のダウンロードが条件)</td></tr>
         </tbody>
       </table></div>
 
@@ -214,7 +234,7 @@
 
       <div class="end-nav">
         <a href="community.html">← コミュニティ・リソース</a>
-        <a href="appendix.html">付録:モデル更新履歴 →</a>
+        <a href="appendix.html">付録:更新履歴 →</a>
       </div>
 
     </div>

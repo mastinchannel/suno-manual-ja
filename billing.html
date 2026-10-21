@@ -42,7 +42,7 @@
   "description": "Sunoのプラン・クレジットの仕組み、支払い方法、解約・返金、ログインできない場合の対処法までを解説する日本語ガイド。",
   "inLanguage": "ja",
   "datePublished": "2026-07-08",
-  "dateModified": "2026-07-12",
+  "dateModified": "2026-10-20",
   "url": "https://suno.mastinchannel.com/billing.html",
   "mainEntityOfPage": "https://suno.mastinchannel.com/billing.html",
   "image": "https://suno.mastinchannel.com/assets/og-image.jpg",
@@ -67,7 +67,7 @@
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
       <div class="brand-text">
         <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
-        <span class="sub">非公式・2026年7月8日時点</span>
+        <span class="sub">非公式・2026年10月20日時点</span>
       </div>
     </div>
   </div>
@@ -81,12 +81,14 @@
         <li>
           <a class="chap" href="making-music.html">曲を作る</a>
           <ul class="sub-links">
+            <li><a href="making-music.html#mm-v6">v6でできること</a></li>
             <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
             <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
             <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
             <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
             <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
-            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理・Albums</a></li>
+            <li><a href="making-music.html#mm-download">ダウンロード上限</a></li>
             <li><a href="making-music.html#mm-stem">Stem分離</a></li>
           </ul>
         </li>
@@ -94,9 +96,11 @@
           <a class="chap" href="studio.html">Suno Studio</a>
           <ul class="sub-links">
             <li><a href="studio.html#st-overview">概要・動作環境</a></li>
-            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-basics">基本操作・ショートカット</a></li>
+            <li><a href="studio.html#st-chat">Studio Chat</a></li>
+            <li><a href="studio.html#st-midi">MIDI・シンセ</a></li>
             <li><a href="studio.html#st-edit">編集・録音</a></li>
-            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-mix">エフェクト・オートメーション</a></li>
             <li><a href="studio.html#st-export">エクスポート</a></li>
             <li><a href="studio.html#st-updates">最近のアップデート</a></li>
           </ul>
@@ -107,7 +111,7 @@
         <li><a class="chap" href="hooks.html">Hooks</a></li>
         <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
         <li><a class="chap" href="glossary.html">用語集</a></li>
-        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+        <li><a class="chap" href="appendix.html">付録:更新履歴</a></li>
       </ol>
     </nav>
     <div class="sidebar-footer">
@@ -133,15 +137,16 @@
 
       <h3>プランの種類と月間クレジット数</h3>
       <div class="table-wrap"><table>
-        <thead><tr><th>プラン</th><th>月間クレジット</th><th>特徴</th></tr></thead>
+        <thead><tr><th>プラン</th><th>クレジット</th><th>ダウンロード</th><th>使えるモデル・主な特徴</th></tr></thead>
         <tbody>
-          <tr><td>Free(無料)</td><td>50クレジット(毎日補充)</td><td>1日10曲程度作成可能</td></tr>
-          <tr><td>Pro</td><td>2,500クレジット/月</td><td>追加クレジット購入可</td></tr>
-          <tr><td>Premier</td><td>10,000クレジット/月</td><td>追加クレジット購入可、Studio利用可</td></tr>
+          <tr><td>Free(無料)</td><td>50クレジット(毎日補充)</td><td>トライアル最大7曲(生涯・非商用)</td><td>v6-mini。1日10曲程度作成可能</td></tr>
+          <tr><td>Pro</td><td>2,500クレジット/月</td><td>月20曲(商用利用可)</td><td>v6・v6-wild・v6-mini・Custom Models。追加クレジット購入可</td></tr>
+          <tr><td>Premier</td><td>10,000クレジット/月</td><td>月60曲(商用利用可、Studioでの作業は対象外)</td><td>Proの内容に加えてSuno Studio、Advanced Split、Custom Modelの共有</td></tr>
         </tbody>
       </table></div>
       <p>プラン比較は suno.com/account で確認できます。Pro/Premierで月間クレジットを使い切った場合も、Basicと同じ1日50クレジットが追加で付与されます。</p>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2410049">What type of plan do I have?</a></blockquote>
+      <p>1回の生成(2曲)で消費するのは10クレジットです。ダウンロード数はクレジットとは別枠で、上限に達したら追加購入できます(詳しくは<a href="making-music.html#mm-download">ダウンロード上限</a>)。</p>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2410049">What type of plan do I have?</a> / <a href="https://help.suno.com/en/articles/13926209">How many downloads come with my subscription?</a> / <a href="https://help.suno.com/en/articles/13924737">Current Models: v6</a> / <a href="https://help.suno.com/en/articles/13924481">v6 FAQ</a></blockquote>
 
       <h3>プロフィール設定(表示名・アバター)</h3>
       <ul>
@@ -157,7 +162,7 @@
         <li><strong>クレジットの追加方法</strong>:Pro→Premierへのアップグレード、または suno.com/account の Buy More Credits から追加購入。</li>
         <li><strong>クレジットは繰り越されない</strong>:使い切らなくても、翌日・翌月には既定の量にリセットされます。</li>
       </ul>
-      <p>補足:1日50クレジットの追加分で作った曲も、サブスクリプションが有効な間は商用利用権が付与されます(Basicプランに戻ると新規の曲は商用利用不可になります)。</p>
+      <p>補足:1日50クレジットの追加分で作った曲も、サブスクリプションが有効な間は有料プランの曲として扱われます。2026年9月3日以降、商用利用には有料プラン加入中のダウンロードが必要です(<a href="rights.html">権利と著作権</a>)。</p>
       <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2525441">How many credits do I have left?</a> / <a href="https://help.suno.com/en/articles/2418177">When will I get more credits?</a> / <a href="https://help.suno.com/en/articles/2417089">How do I get more credits?</a> / <a href="https://help.suno.com/en/articles/2643713">What happens if I use all of my paid credits?</a> / <a href="https://help.suno.com/en/articles/2524993">Why did my credits reset?</a></blockquote>
 
       <h2>支払い方法と請求情報</h2>
@@ -207,9 +212,10 @@
       <h3>その他のトラブル(wav・プロフィール表示)</h3>
       <ul>
         <li><strong>wavファイルがダウンロードできない</strong>:wav出力はPro/Premier限定かつWeb版のみ。モバイルからは常にmp3になります。</li>
+        <li><strong>ダウンロードできなくなった</strong>:2026年9月3日からダウンロードに月ごとの上限があります(無料はトライアル最大7曲)。残り回数を確認し、必要なら追加購入してください。再生と共有は上限に関係なく使えます。</li>
         <li><strong>プロフィールに曲が表示されない</strong>:曲は既定でLink Only。Library →「…」→ Publish で公開に切り替えると表示されます。</li>
       </ul>
-      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2479873">Why can't I download wav files?</a> / <a href="https://help.suno.com/en/articles/2551361">Why don't I see songs in my profile?</a></blockquote>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/2479873">Why can't I download wav files?</a> / <a href="https://help.suno.com/en/articles/2551361">Why don't I see songs in my profile?</a> / <a href="https://help.suno.com/en/articles/13926593">Do download limits apply to songs I already made?</a></blockquote>
 
       <div class="chapter-banner">
         <a href="https://mastinchannel.com" target="_blank" rel="noopener noreferrer">

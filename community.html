@@ -42,7 +42,7 @@
   "description": "Sunoのコメント機能、通報方法、利用年齢制限やデータ利用に関する開示情報を解説する日本語ガイド。",
   "inLanguage": "ja",
   "datePublished": "2026-07-08",
-  "dateModified": "2026-07-12",
+  "dateModified": "2026-10-20",
   "url": "https://suno.mastinchannel.com/community.html",
   "mainEntityOfPage": "https://suno.mastinchannel.com/community.html",
   "image": "https://suno.mastinchannel.com/assets/og-image.jpg",
@@ -67,7 +67,7 @@
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="sidebar">目次 ☰</button>
       <div class="brand-text">
         <a class="mark" href="index.html" style="text-decoration:none;">Suno AI 日本語マニュアル</a>
-        <span class="sub">非公式・2026年7月8日時点</span>
+        <span class="sub">非公式・2026年10月20日時点</span>
       </div>
     </div>
   </div>
@@ -81,12 +81,14 @@
         <li>
           <a class="chap" href="making-music.html">曲を作る</a>
           <ul class="sub-links">
+            <li><a href="making-music.html#mm-v6">v6でできること</a></li>
             <li><a href="making-music.html#mm-edit">曲を編集する</a></li>
             <li><a href="making-music.html#mm-material">素材から曲を作る</a></li>
             <li><a href="making-music.html#mm-prompt">プロンプトとスタイル</a></li>
             <li><a href="making-music.html#mm-persona">Persona と Voice</a></li>
             <li><a href="making-music.html#mm-remix">Remix・Cover・共有</a></li>
-            <li><a href="making-music.html#mm-manage">曲の管理</a></li>
+            <li><a href="making-music.html#mm-manage">曲の管理・Albums</a></li>
+            <li><a href="making-music.html#mm-download">ダウンロード上限</a></li>
             <li><a href="making-music.html#mm-stem">Stem分離</a></li>
           </ul>
         </li>
@@ -94,9 +96,11 @@
           <a class="chap" href="studio.html">Suno Studio</a>
           <ul class="sub-links">
             <li><a href="studio.html#st-overview">概要・動作環境</a></li>
-            <li><a href="studio.html#st-basics">基本操作 / Transport</a></li>
+            <li><a href="studio.html#st-basics">基本操作・ショートカット</a></li>
+            <li><a href="studio.html#st-chat">Studio Chat</a></li>
+            <li><a href="studio.html#st-midi">MIDI・シンセ</a></li>
             <li><a href="studio.html#st-edit">編集・録音</a></li>
-            <li><a href="studio.html#st-mix">ミキシング・EQ</a></li>
+            <li><a href="studio.html#st-mix">エフェクト・オートメーション</a></li>
             <li><a href="studio.html#st-export">エクスポート</a></li>
             <li><a href="studio.html#st-updates">最近のアップデート</a></li>
           </ul>
@@ -107,7 +111,7 @@
         <li><a class="chap" href="hooks.html">Hooks</a></li>
         <li><a class="chap" href="community.html">コミュニティ・リソース</a></li>
         <li><a class="chap" href="glossary.html">用語集</a></li>
-        <li><a class="chap" href="appendix.html">付録:モデル更新履歴</a></li>
+        <li><a class="chap" href="appendix.html">付録:更新履歴</a></li>
       </ol>
     </nav>
     <div class="sidebar-footer">
@@ -143,6 +147,15 @@
       <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/9720001">Minimum Age</a></blockquote>
       <p>また、Sunoはカリフォルニア州法(CA AB 2013)に基づき、生成AIモデルの学習データに関する開示文書を公開しています。音楽生成モデル・音声合成(Text-to-Speech)モデルのそれぞれについて、学習データの収集方法や利用目的などがまとめられています。詳細は原文をご参照ください。</p>
       <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/9709569">Suno - CA AB 2013 Disclosure</a>(音楽生成モデル) / <a href="https://help.suno.com/en/articles/9710273">CA AB 2013 Disclosure (Text to Speech)</a>(音声合成モデル)</blockquote>
+
+      <h2>2026年9月の変更に関する公式FAQ</h2>
+      <p>2026年8月10日、Sunoは「Upcoming Changes FAQ: Downloads, Models, and Terms of Service」を公開し、9月に行われる3つの変更を予告しました。</p>
+      <ul>
+        <li><strong>ダウンロード上限</strong>:悪意のある大量書き出しを防ぎ、意図をもった音楽制作のために使ってもらうため、ダウンロードに上限を設ける(再生・共有・Remixは引き続き自由)。詳しくは<a href="making-music.html#mm-download">ダウンロード上限</a>。</li>
+        <li><strong>旧モデルの提供終了</strong>:v6の公開にあわせて旧モデルでの新規生成を終了。既存の曲はそのまま残る。詳しくは<a href="intro.html#models">はじめに:モデル</a>。</li>
+        <li><strong>利用規約の改定</strong>:2026年9月3日施行。商用利用とダウンロードの関係などが変わった。詳しくは<a href="rights.html">権利と著作権</a>。</li>
+      </ul>
+      <blockquote class="source">出典: <a href="https://help.suno.com/en/articles/13614785">Upcoming Changes FAQ: Downloads, Models, and Terms of Service</a></blockquote>
 
       <div class="chapter-banner">
         <a href="https://mastinchannel.com" target="_blank" rel="noopener noreferrer">
